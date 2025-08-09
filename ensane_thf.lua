@@ -25,7 +25,7 @@ function get_sets()
 
 	sets.TP.Attack = {
     		head="Nyame Helm",
-    		body="Nyame Mail",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
     		hands="Meg. Gloves +2",
     		legs="Meg. Chausses +2",
     		feet="Nyame Sollerets",
@@ -45,9 +45,9 @@ function get_sets()
 
 	sets.DT = {
    		head="Nyame Helm",
-    		body="Nyame Mail",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
     		hands="Nyame Gauntlets",
-		legs="Nyame Flanchard",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
     		feet="Nyame Sollerets",
     		neck="Combatant's Torque",
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -72,32 +72,47 @@ function get_sets()
 
 	sets.WS.DEX = {
     		head="Mummu Bonnet +2",
-    		body="Mummu Jacket +2",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
     		hands="Meg. Gloves +2",
-    		legs="Meg. Chausses +2",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
     		feet="Mummu Gamash. +2",
     		neck="Combatant's Torque",
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Brutal Earring",
     		right_ear="Odr Earring",
-    		left_ring="Mummu Ring",
+    		left_ring="Cornelia's Ring",
     		right_ring="Epona's Ring",
     		back="Atheling Mantle"	
 	}
 
 	sets.WS.STR = {
     		head="Mummu Bonnet +2",
-    		body="Mummu Jacket +2",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
     		hands="Meg. Gloves +2",
-    		legs="Meg. Chausses +2",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
     		feet="Mummu Gamash. +2",
     		neck="Rep. Plat. Medal",
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Brutal Earring",
     		right_ear="Odr Earring",
-    		left_ring="Rajas Ring",
+    		left_ring="Cornelia's Ring",
     		right_ring="Epona's Ring",
     		back="Cerb. Mantle +1",
+	}
+
+	sets.WS.Elemental = {
+		head="Nyame Helm",
+		neck="Sibyl Scarf",
+		left_ear="Brutal Earring",
+		right_ear="Hecate's Earring",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
+		hands="Nyame Gauntlets",
+    		left_ring="Cornelia's Ring",
+    		right_ring="Epona's Ring",
+    		back="Canny Cape",
+   		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Nyame Sollerets",
 	}
 
 	-- 40% Dex / 40% Chr / Accuracy Modifier / Scission / Detonation
@@ -135,6 +150,8 @@ function get_sets()
 
 	-- 15% Str / 15% Vit / Accuracy Modifier / Gravitation / Liquefaction
 	sets.WS['Asuran Fists'] = sets.WS.STR
+
+	sets.WS['Aeolian Edge'] = sets.WS.Elemental
 
 	sets.RA = {}
 

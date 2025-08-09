@@ -5,9 +5,9 @@ function get_sets()
 	-- INIT
 	NIN = {}
 	NIN.main = { main="Heishi Shorinken" } 
-	-- main="" "Yagyu Darkblade" "Tauret" "Kaja Kunckles" "Kaja Sword"
+	-- main="" "Heishi Shorinken" "Kaja Kunckles" "Naegling" "Tauret"
 	NIN.sub = { sub="Yagyu Darkblade" }
-	-- sub="Yagyu Darkblade" "Kunimitsu"
+	-- sub="Yagyu Darkblade" "Kunimitsu" "Uzura"
 	-- NIN.range = { range="Aliyat Chakram" }
 	NIN.ammo = { ammo="Date Shuriken" }
 	-- ammo="Date Shuriken" "Suppa Shuriken" "Per. Lucky Egg"
@@ -15,24 +15,24 @@ function get_sets()
 	sets.precast = {}
 
 	sets.precast.Utsusemi = {
-		head="Hiza. Somen +2",
+    		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Magoraga Beads",
 		left_ear="Loquac. Earring",
 		right_ear="Suppanomimi",
 		body="Passion Jacket",
-		hands="Hizamaru Kote +2",
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Defending Ring",
-		right_ring="Sucor Ring",
+		right_ring="Succor Ring",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
 		waist="Phasmida Belt",
-		legs="Hiza. Hizayoroi +2",
-		feet="Hattori Kyahan +3",
+		legs="Hattori Hakama +2",
+    		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
 
 	sets.midcast = {}
 
 	sets.midcast.Utsusemi = {
-		head="Nyame Helm",
+    		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Elite Royal Collar",
 		left_ear="Brutal Earring",
 		right_ear="Ethereal Earring",
@@ -42,38 +42,38 @@ function get_sets()
 		right_ring="Eihwaz Ring",
     		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+6','"Mag.Atk.Bns."+10',}},
 		waist="Phasmida Belt",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
 
 	sets.midcast.NinjutsuMAtk = {
-		head="Nyame Helm",
+    		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Sibyl Scarf",
 		left_ear="Hecate's Earring",
 		right_ear="Stealth Earring",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Defending Ring",
 		right_ring="Mummu Ring",
     		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+6','"Mag.Atk.Bns."+10',}},
 		waist="Phasmida Belt",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
 
 	sets.midcast.Ninjutsu = {
-		head="Mummu Bonnet +2",
+    		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Henic Torque",
 		left_ear="Hecate's Earring",
 		right_ear="Stealth Earring",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Defending Ring",
 		right_ring="Mummu Ring",
     		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+6','"Mag.Atk.Bns."+10',}},
 		waist="Phasmida Belt",
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
 
 	sets.TP = {}
@@ -90,22 +90,22 @@ function get_sets()
 		right_ring="Rajas Ring",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		legs="Hiza. Hizayoroi +2",
+		legs="Hattori Hakama +2",
 		feet="Hattori Kyahan +3",
 	}
 
 	sets.DT = {
-		head="Nyame Helm",
+    		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Combatant's Torque",
 		left_ear="Brutal Earring",
 		right_ear="Suppanomimi",
 		body="Hattori Ningi +3",
-		hands="Nyame Gauntlets",
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Defending Ring",
 		right_ring="Epona's Ring",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		legs="Nyame Flanchard",
+		legs="Hattori Hakama +2",
 		feet="Hattori Kyahan +3",
 	}
 
@@ -122,65 +122,80 @@ function get_sets()
 	sets.WS = {}
 
 	sets.WS['Blade: Hi'] = {
-		head="Mummu Bonnet +2",
+    		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Aqua Gorget",
 		left_ear="Brutal Earring",
 		right_ear="Moonshade Earring",
 		body="Hattori Ningi +3",
-		hands="Hizamaru Kote +2",
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Epona's Ring",
-		right_ring="Mummu Ring",
+    		right_ring="Cornelia's Ring",
     		back={ name="Andartia's Mantle", augments={'AGI+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 		-- waist="Aqua Belt",
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		legs="Hiza. Hizayoroi +2",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Hattori Kyahan +3",
 	}
 
 	sets.WS['Blade: Shun'] = {
-		head="Mummu Bonnet +2",
+    		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Breeze Gorget",
 		left_ear="Brutal Earring",
 		right_ear="Moonshade Earring",
 		body="Hattori Ningi +3",
-		hands="Hizamaru Kote +2",
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Epona's Ring",
-		right_ring="Mummu Ring",
+    		right_ring="Cornelia's Ring",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','Weapon skill damage +10%',}},
 		waist="Breeze Belt",
-		legs="Hiza. Hizayoroi +2",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Hattori Kyahan +3",
 	}
 
 	sets.WS['Blade: Ten'] = {
-		head="Mummu Bonnet +2",
+    		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Soil Gorget",
 		left_ear="Brutal Earring",
 		right_ear="Moonshade Earring",
-		body="Hattori Ningi +3",
-		hands="Hizamaru Kote +2",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Epona's Ring",
-		right_ring="Mummu Ring",
+    		right_ring="Cornelia's Ring",
     		back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
 		-- waist="Soil Belt",
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		legs="Hiza. Hizayoroi +2",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+		feet="Hattori Kyahan +3",
+	}
+
+	sets.WS['Savage Blade'] = {
+    		head={ name="Nyame Helm", augments={'Path: B',}},
+		neck="Rep. Plat. Medal",
+		left_ear="Brutal Earring",
+		right_ear="Moonshade Earring",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    		left_ring="Rufescent Ring",
+    		right_ring="Cornelia's Ring",
+    		back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
+   		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Hattori Kyahan +3",
 	}
 
 	sets.WS.Elemental = {
-		head="Nyame Helm",
+    		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Sibyl Scarf",
 		left_ear="Brutal Earring",
 		right_ear="Hecate's Earring",
-		body="Nyame Mail",
-		hands="Nyame Gauntlets",
+    		body={ name="Nyame Mail", augments={'Path: B',}},
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Epona's Ring",
-		right_ring="Mummu Ring",
+    		right_ring="Cornelia's Ring",
     		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+6','"Mag.Atk.Bns."+10',}},
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		legs="Nyame Flanchard",
-		feet="Nyame Sollerets",
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
 
 -- equip(set_combine(sets.midcast.NinjutsuMatk,{hands={name="Iga Tekko +2"}))
@@ -235,7 +250,7 @@ function get_sets()
 		right_ring="Shneddick Ring",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		legs="Hiza. Hizayoroi +2",
+		legs="Hattori Hakama +2",
 		feet="Hattori Kyahan +3",
 	})
 
