@@ -3,44 +3,49 @@ include('organizer-lib')
 function get_sets()
 
 	-- INIT
-	THF = {}
-	THF.main = { main="Tauret" }
-	-- main="Mandau" "Twashtar" "Tauret" "Kaja Sword" "Kaja Knuckles"
-	THF.sub = { sub="Thief's Knife" }
-	THF.ammo = { ammo="Per. Lucky Egg" }
-	-- THF.range = { range="Aliyat Chakram" }
+	-- Setup your Default Config below
+	COR = {}
+	COR.main = { main="Naegling" }
+	-- main="Naegling" 
+	COR.sub = { sub="Tauret" }
+	COR.range = { range="Armageddon" }
+	COR.ammo = { ammo="Voluspa Bullet" }
 
+	-- Useful Sets for Copy & Paste to include upgraded "Laksamana's" "Lanun" "Chasseur's"
 	-- Nyame 		"Nyame Helm" 		"Nyame Mail" 		"Nyame Gauntlets" 	"Nyame Flanchard"	"Nyame Sollerets"
 	-- Mummu 		"Mummu Bonnet +2" 	"Mummu Jacket +2" 	"Mummu Gamash. +2"
 	-- Meghanada 		"Meg. Gloves +2" 	"Meg. Chausses +2"
-	-- Treasure Hunter 	"Plun. Armlets" 	"Skulk. Poulaines"
+	-- Corsair's		"Corsair's Tricorne"
+	-- Commodore		"Commodore Frac"
+	-- Navarch's		"Navarch's Gants +2"
+	-- Lanun 		"Lanun Tricorne"	
 
 	sets.precast = {}
 
 	sets.midcast = {}
 
+	-- 3 Macro's for changing from "Attack" to "DT" and to equip "Idle" set
+	-- /console gs c Atk
+	-- /console gs c DT
+	-- /console gs equip sets.Idle
+
 	sets.TP = {}
-	-- TP_mode = 'Attack' 'TH' 'DT'
+	-- TP_mode = 'Attack' 'DT'
 	TP_mode = 'Attack'
 
 	sets.TP.Attack = {
-    		head={ name="Nyame Helm", augments={'Path: B',}},
-    		body={ name="Nyame Mail", augments={'Path: B',}},
+    		head="Mummu Bonnet +2",
+    		body="Mummu Jacket +2",
     		hands="Meg. Gloves +2",
     		legs="Meg. Chausses +2",
-    		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+    		feet="Mummu Gamash. +2",
     		neck="Combatant's Torque",
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Brutal Earring",
     		right_ear="Suppanomimi",
     		left_ring="Rajas Ring",
     		right_ring="Epona's Ring",
-    		back="Canny Cape",
-	}
-	
-	sets.TH = {
-		hands="Plun. Armlets",
-		feet="Skulk. Poulaines"
+    		back="Cerb. Mantle +1",
 	}
 
 	sets.DT = {
@@ -55,35 +60,14 @@ function get_sets()
     		right_ear="Suppanomimi",
     		left_ring="Defending Ring",
     		right_ring="Epona's Ring",
-    		back="Canny Cape",
+    		back="Cerb. Mantle +1",
 	}
 
 	sets.TP.DT = sets.DT
 
-	sets.JA = {}
-
-	sets.JA['Step'] = { right_ear="Choreia Earring" }
-	sets.JA['Waltz'] = { 
-		head="Mummu Bonnet +2",
-		body="Passion Jacket",
-	}
+	sets.RA = {}
 
 	sets.WS = {}
-
-	sets.WS.DEX = {
-    		head={ name="Nyame Helm", augments={'Path: B',}},
-    		body={ name="Nyame Mail", augments={'Path: B',}},
-    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
-    		feet={ name="Nyame Sollerets", augments={'Path: B',}},
-    		neck="Combatant's Torque",
-    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-    		left_ear="Brutal Earring",
-    		right_ear="Odr Earring",
-    		left_ring="Cornelia's Ring",
-    		right_ring="Epona's Ring",
-    		back="Atheling Mantle"	
-	}
 
 	sets.WS.STR = {
     		head={ name="Nyame Helm", augments={'Path: B',}},
@@ -109,78 +93,59 @@ function get_sets()
     		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
     		left_ring="Cornelia's Ring",
     		right_ring="Epona's Ring",
-    		back="Canny Cape",
+    		back="Cerb. Mantle +1",
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		legs={ name="Nyame Flanchard", augments={'Path: B',}},
     		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
 
-	-- 40% Dex / 40% Chr / Accuracy Modifier / Scission / Detonation
-	sets.WS['Dancing Edge'] = set_combine(sets.WS.DEX,{
-		neck="Soil Gorget",
-	})
-
-	-- 50% Dex / Crit Moifier / Gravitation / Transfixion
-	sets.WS['Evisceration'] = set_combine(sets.WS.DEX,{
-		neck="Soil Gorget",
-	})
-
-	-- 40% Dex / 40% Agi / Damage Modifier / Fragmentation
-	sets.WS['Shark Bite'] = set_combine(sets.WS.DEX,{ 
-		neck="Breeze Gorget",
-		right_ear="Moonshade Earring",
-	})
-
-	-- 60% Dex / Attack Modifier / Fusion / Compression
-	sets.WS['Mandalic Stab'] = set_combine(sets.WS.DEX,{
-		neck="Flame Gorget",
-	})
-
-	-- 80% Dex / Damage Modifier / Darkness / Distortion
-	sets.WS['Rudra\'s Storm'] = set_combine(sets.WS.DEX,{
-		neck="Aqua Gorget",
-		right_ear="Moonshade Earring",
-	})
-
-	-- 80% Str / Aftermath / Darkness / Gravitation
-	sets.WS['Mercy Stroke'] = sets.WS.STR
-
-	-- 50% Str / 50% Mnd / Damage Modifier / Fragmentation / Scission
 	sets.WS['Savage Blade'] = sets.WS.STR
-
-	-- 15% Str / 15% Vit / Accuracy Modifier / Gravitation / Liquefaction
-	sets.WS['Asuran Fists'] = sets.WS.STR
-
 	sets.WS['Aeolian Edge'] = sets.WS.Elemental
 
-	sets.RA = {}
+	sets.JA = {}
+
+	sets.JA['Phantom Roll'] = {
+		main="Commodore's Knife",		-- Phantom Roll Duration +30 (MH Only) XI AUG 
+		head="Lanun Tricorne",			-- Phantom Roll AUG
+		back="Camulus's Mantle",		-- Phantom Roll Duration +30
+    		left_ring="Luzaf's Ring",		-- Phantom Roll Range 7.9->15.9
+    		right_ring="Barataria Ring",		-- Phantom Roll +5
+	}
+
+	sets.JA['Quick Draw'] = set_combine(sets.WS.Elemental,{
+		head="Corsair's Tricorne",
+	})
+
+	sets.JA['Random Deal'] = { body="Commodore Frac" }
+	sets.JA['Snake Eye'] = {}
+	sets.JA['Fold'] = {}
+	sets.JA['Wild Card'] = {}
+	sets.JA['Tactician\'s Roll'] = {}
 
 	sets.Idle = set_combine(
-		THF.main, THF.sub, THF.range, THF.ammo,
+		COR.main, COR.sub, COR.range, COR.ammo,
 	{
-    		head={ name="Nyame Helm", augments={'Path: B',}},
-    		body="Passion Jacket",
+    		head="Mummu Bonnet +2",
+    		body="Mummu Jacket +2",
     		hands="Meg. Gloves +2",
     		legs="Meg. Chausses +2",
-    		feet={ name="Nyame Sollerets", augments={'Path: B',}},
-		neck="Combatant's Torque",
+    		feet="Mummu Gamash. +2",
+    		neck="Combatant's Torque",
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Brutal Earring",
     		right_ear="Suppanomimi",
     		left_ring="Defending Ring",
     		right_ring="Shneddick Ring",
-    		back="Canny Cape",
+    		back="Cerb. Mantle +1",
 	})
 
 end
 
 function precast(spell)
-	if spell.type == 'Ninjutsu' then
-		equip(sets.precast.Utsusemi)
-	end
-
-	if spell.action_type == 'Ranged Attack' then
-		equip(sets.precast.TH)
+	if spell.type == 'CorsairShot' then
+		equip(sets.JA['Quick Draw'])
+	elseif spell.type == 'CorsairRoll' then
+		equip(sets.JA['Phantom Roll'])
 	end
 end
 
@@ -190,8 +155,6 @@ function midcast(spell)
 		equip(sets.JA[spell.english])
 	elseif sets.WS[spell.english] then
 		equip(sets.WS[spell.english])
-	elseif spell.type == 'Ninjutsu' then
-		equip(sets.midcast.Utsusemi)
 	end
 end
 
@@ -199,7 +162,7 @@ function aftercast(spell)
 	if player.status == 'Engaged' then
 		equip(sets.TP[TP_mode])
 	else
-		-- equip(sets.Idle)
+		equip(sets.Idle)
 	end
 end
 

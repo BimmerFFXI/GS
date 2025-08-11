@@ -4,7 +4,7 @@ function get_sets()
 
 	-- INIT
 	NIN = {}
-	NIN.main = { main="Heishi Shorinken" } 
+	NIN.main = { main="Naegling" } 
 	-- main="" "Heishi Shorinken" "Kaja Kunckles" "Naegling" "Tauret"
 	NIN.sub = { sub="Yagyu Darkblade" }
 	-- sub="Yagyu Darkblade" "Kunimitsu" "Uzura"

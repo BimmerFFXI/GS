@@ -7,7 +7,7 @@ function get_sets()
 	WAR.main = { main="Naegling" } 
 	-- main="Naegling" 
 	WAR.sub = { sub="" }
-	-- sub="" 
+	-- sub="Blurred Shield +1" 
 	-- WAR.range = { range="" }
 	WAR.ammo = { ammo="Iron Gobbet" }
 	-- ammo="Iron Gobbet" "Per. Lucky Egg"
@@ -28,7 +28,7 @@ function get_sets()
 	}
 
 	sets.TP = {}
-	TP_mode = 'Attack'
+	TP_mode = 'DT'
 
 	sets.TP.Attack = {
     		head="Sakpata's Helm",
