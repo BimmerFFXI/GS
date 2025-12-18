@@ -7,10 +7,10 @@ function get_sets()
 	PLD.main = { main="Burtgang" } 
 	-- main="Burtgang" "Kaja Sword"
 	PLD.sub = { sub="Aegis" }
-	-- sub="Aegis" "Ochain"
+	-- sub="Aegis" "Ochain" "Duban"
 	-- PLD.range = { range="" }
-	PLD.ammo = { ammo="Iron Gobbet" }
-	-- ammo="Iron Gobbet" "Per. Lucky Egg"
+	PLD.ammo = { ammo="Crepuscular Pebble" }
+	-- ammo="Crepuscular Pebble" "Iron Gobbet" "Per. Lucky Egg"
 
 	-- PLD INIT
 	-- Nyame 	"Nyame Helm" 		"Nyame Mail" 		"Nyame Gauntlets" 	"Nyame Flanchard" 	"Nyame Sollerets"
@@ -24,6 +24,7 @@ function get_sets()
 		head="Sakpata's Helm",
 		neck="Baetyl Pendant",
 		right_ear="Loquac. Earring",
+		left_ring="Kishar Ring",
 		body="Nuevo Coselete",
 		legs="Enif Cosciales",
 	}
@@ -33,6 +34,7 @@ function get_sets()
 	sets.midcast.Enmity = {
 		head="Vlr. Coronet +1",
 		body="Creed Cuirass +2",
+		right_ear="Cryptic Earring",
 		left_ring="Hercules' Ring",
 		right_ring="Eihwaz Ring",
 		back="Cerb. Mantle +1",
@@ -40,7 +42,7 @@ function get_sets()
 	}
 
 	sets.TP = {}
-	TP_mode = 'DT'
+	TP_mode = 'Defense'
 
 	sets.TP.Attack = {
     		head="Sakpata's Helm",
@@ -51,12 +53,20 @@ function get_sets()
 		neck="Combatant's Torque",
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Brutal Earring",
-    		right_ear="Digni. Earring",
+		right_ear="Cessance Earring",
     		left_ring="Flamma Ring",
     		right_ring="Rajas Ring",
-    		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'
-}},
+    		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}},
 	}
+
+	sets.TP.Defense = set_combine(sets.TP.Attack,{
+		neck="Null Loop",
+		left_ear="Ethereal Earring",
+		right_ear="Chev. Earring",
+		left_ring="Defending Ring",
+    		right_ring="Shneddick Ring",
+		waist="Plat. Mog. Belt",
+	})
 
 	sets.DT = {
     		head="Sakpata's Helm",
@@ -100,8 +110,35 @@ function get_sets()
     		right_ear="Moonshade Earring",
     		left_ring="Rufescent Ring",
     		right_ring="Cornelia's Ring",
-    		back="Cerb. Mantle +1",	
+    		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}},
 	}
+
+	sets.WS['Aeolian Edge'] = {
+    		head={ name="Nyame Helm", augments={'Path: B',}},
+    		body={ name="Nyame Mail", augments={'Path: B',}},
+    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+    		legs={ name="Nyame Flanchard", augments={'Path: B',}},
+    		feet={ name="Nyame Sollerets", augments={'Path: B',}},
+		neck="Sibyl Scarf",
+   		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+    		left_ear="Novio Earring",
+    		right_ear="Moonshade Earring",
+    		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
+    		right_ring="Cornelia's Ring",
+    		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}},
+	}
+
+	-- 80% DEX, ftp replicating, Light/Distortion
+	sets.WS['Chant du Cygne'] = set_combine(sets.WS['Savage Blade'],{
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
+	})
+
+	-- 85% MND, ftp replicating, Darkness*/Gravitation/Scission
+	sets.WS['Requiescat'] = set_combine(sets.WS['Savage Blade'],{ 
+		neck="Fotia Gorget",
+		waist="Fotia Belt",		
+	})
 
 	sets.RA = {}
 
@@ -116,7 +153,7 @@ function get_sets()
 		neck="Combatant's Torque",
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Brutal Earring",
-    		right_ear="Digni. Earring",
+		right_ear="Cessance Earring",
     		left_ring="Defending Ring",
     		right_ring="Shneddick Ring",
     		back={ name="Rudianos's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','"Dbl.Atk."+10'}},
@@ -159,7 +196,9 @@ end
 
 function self_command(command)
     if command == 'DT' then
-        equip(sets.DT)
+        	equip(sets.DT)
+	elseif command == 'Defense' then
+		equip(sets.TP.Defense)
     elseif command == 'TP' then
         if TP_mode=="Attack" then
             TP_mode="DT"

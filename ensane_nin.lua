@@ -4,7 +4,7 @@ function get_sets()
 
 	-- INIT
 	NIN = {}
-	NIN.main = { main="Naegling" } 
+	NIN.main = { main="Heishi Shorinken" } 
 	-- main="" "Heishi Shorinken" "Kaja Kunckles" "Naegling" "Tauret"
 	NIN.sub = { sub="Yagyu Darkblade" }
 	-- sub="Yagyu Darkblade" "Kunimitsu" "Uzura"
@@ -24,7 +24,7 @@ function get_sets()
 		left_ring="Defending Ring",
 		right_ring="Succor Ring",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
-		waist="Phasmida Belt",
+		waist="Null Belt",
 		legs="Hattori Hakama +2",
     		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
@@ -41,37 +41,37 @@ function get_sets()
 		left_ring="Defending Ring",
 		right_ring="Eihwaz Ring",
     		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+6','"Mag.Atk.Bns."+10',}},
-		waist="Phasmida Belt",
+		waist="Null Belt",
     		legs={ name="Nyame Flanchard", augments={'Path: B',}},
     		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
 
 	sets.midcast.NinjutsuMAtk = {
-    		head={ name="Nyame Helm", augments={'Path: B',}},
+    		head="Mochi. Hatsu. +4",
 		neck="Sibyl Scarf",
-		left_ear="Hecate's Earring",
+		left_ear="Novio Earring",
 		right_ear="Stealth Earring",
     		body={ name="Nyame Mail", augments={'Path: B',}},
     		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Defending Ring",
-		right_ring="Mummu Ring",
+    		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+6','"Mag.Atk.Bns."+10',}},
-		waist="Phasmida Belt",
+		waist="Null Belt",
     		legs={ name="Nyame Flanchard", augments={'Path: B',}},
     		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
 
 	sets.midcast.Ninjutsu = {
-    		head={ name="Nyame Helm", augments={'Path: B',}},
-		neck="Henic Torque",
-		left_ear="Hecate's Earring",
+    		head="Hachi. Hatsu. +4",
+    		neck="Incanter's Torque",
+		left_ear="Novio Earring",
 		right_ear="Stealth Earring",
     		body={ name="Nyame Mail", augments={'Path: B',}},
-    		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
+		hands="Kog. Tekko +2",
 		left_ring="Defending Ring",
-		right_ring="Mummu Ring",
+    		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
     		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+6','"Mag.Atk.Bns."+10',}},
-		waist="Phasmida Belt",
+		waist="Null Belt",
     		legs={ name="Nyame Flanchard", augments={'Path: B',}},
     		feet={ name="Nyame Sollerets", augments={'Path: B',}},
 	}
@@ -80,25 +80,26 @@ function get_sets()
 	TP_mode = 'Attack'
 
 	sets.TP.Attack = {
-		head="Hiza. Somen +2",
+    		head="Hachi. Hatsu. +4",
 		neck="Combatant's Torque",
 		left_ear="Brutal Earring",
-		right_ear="Suppanomimi",
+		right_ear="Cessance Earring",
 		body="Hattori Ningi +3",
-		hands="Hizamaru Kote +2",
+    		hands={ name="Tatena. Gote +1", augments={'Path: A',}},
 		left_ring="Epona's Ring",
 		right_ring="Rajas Ring",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		legs="Hattori Hakama +2",
-		feet="Hattori Kyahan +3",
+		legs={ name="Tatena. Haidate +1", augments={'Path: A',}},
+		feet={ name="Tatena. Sune. +1", augments={'Path: A',}},
+		-- feet="Hattori Kyahan +3",
 	}
 
 	sets.DT = {
     		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Combatant's Torque",
 		left_ear="Brutal Earring",
-		right_ear="Suppanomimi",
+		right_ear="Cessance Earring",
 		body="Hattori Ningi +3",
     		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		left_ring="Defending Ring",
@@ -108,6 +109,8 @@ function get_sets()
 		legs="Hattori Hakama +2",
 		feet="Hattori Kyahan +3",
 	}
+
+	sets.TP.DW = {}
 
 	sets.TP.DT = sets.DT
 
@@ -122,60 +125,58 @@ function get_sets()
 	sets.WS = {}
 
 	sets.WS['Blade: Hi'] = {
-    		head={ name="Nyame Helm", augments={'Path: B',}},
-		neck="Aqua Gorget",
+    		head="Hachi. Hatsu. +4",
+		neck="Fotia Gorget",
 		left_ear="Brutal Earring",
 		right_ear="Moonshade Earring",
 		body="Hattori Ningi +3",
     		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-		left_ring="Epona's Ring",
+		left_ring="Regal Ring",
     		right_ring="Cornelia's Ring",
     		back={ name="Andartia's Mantle", augments={'AGI+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
-		-- waist="Aqua Belt",
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Hattori Kyahan +3",
 	}
 
 	sets.WS['Blade: Shun'] = {
-    		head={ name="Nyame Helm", augments={'Path: B',}},
-		neck="Breeze Gorget",
+    		head="Hachi. Hatsu. +4",
+		neck="Fotia Gorget",
 		left_ear="Brutal Earring",
 		right_ear="Moonshade Earring",
 		body="Hattori Ningi +3",
     		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-		left_ring="Epona's Ring",
+		left_ring="Regal Ring",
     		right_ring="Cornelia's Ring",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','Weapon skill damage +10%',}},
-		waist="Breeze Belt",
+		waist="Fotia Belt",
     		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Hattori Kyahan +3",
 	}
 
 	sets.WS['Blade: Ten'] = {
-    		head={ name="Nyame Helm", augments={'Path: B',}},
-		neck="Soil Gorget",
+    		head="Hachi. Hatsu. +4",
+		neck="Fotia Gorget",
 		left_ear="Brutal Earring",
 		right_ear="Moonshade Earring",
     		body={ name="Nyame Mail", augments={'Path: B',}},
     		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-		left_ring="Epona's Ring",
+		left_ring="Regal Ring",
     		right_ring="Cornelia's Ring",
     		back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
-		-- waist="Soil Belt",
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Hattori Kyahan +3",
 	}
 
 	sets.WS['Savage Blade'] = {
-    		head={ name="Nyame Helm", augments={'Path: B',}},
+    		head="Hachi. Hatsu. +4",
 		neck="Rep. Plat. Medal",
 		left_ear="Brutal Earring",
 		right_ear="Moonshade Earring",
     		body={ name="Nyame Mail", augments={'Path: B',}},
     		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-    		left_ring="Rufescent Ring",
+		left_ring="Regal Ring",
     		right_ring="Cornelia's Ring",
     		back={ name="Andartia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Weapon skill damage +10%',}},
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -187,10 +188,10 @@ function get_sets()
     		head={ name="Nyame Helm", augments={'Path: B',}},
 		neck="Sibyl Scarf",
 		left_ear="Brutal Earring",
-		right_ear="Hecate's Earring",
+		right_ear="Novio Earring",
     		body={ name="Nyame Mail", augments={'Path: B',}},
     		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
-		left_ring="Epona's Ring",
+		left_ring="Regal Ring",
     		right_ring="Cornelia's Ring",
     		back={ name="Andartia's Mantle", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+6','"Mag.Atk.Bns."+10',}},
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
@@ -200,36 +201,42 @@ function get_sets()
 
 -- equip(set_combine(sets.midcast.NinjutsuMatk,{hands={name="Iga Tekko +2"}))
 
+	sets.WS['Blade: Kamu'] = sets.WS['Savage Blade'] ;
+
+	sets.WS['Blade: Ku'] = set_combine(sets.WS['Blade: Ten'],{
+		waist="Fotia Belt",
+	})
+
 	sets.WS['Blade: Teki'] = set_combine(sets.WS.Elemental,{
-		neck="Aqua Gorget",
-		waist="Aqua Belt",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
 	})
 
 	sets.WS['Blade: To'] = set_combine(sets.WS.Elemental,{
-		neck="Snow Gorget",
-		waist="Snow Belt",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
 	})
 
 	sets.WS['Blade: Chi'] = set_combine(sets.WS.Elemental,{})
 
 	sets.WS['Blade: Ei'] = set_combine(sets.WS.Elemental,{
-		neck="Shadow Gorget",
+		neck="Foitia Gorget",
 		right_ring="Archon Ring",
-		waist="Shadow Belt",
+		waist="Fotia Belt",
 	})
 
 	sets.WS['Blade: Yu'] = set_combine(sets.WS.Elemental,{
-		neck="Aqua Gorget",
-		waist="Aqua Belt",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
 	})
 
 	sets.WS['Aeolian Edge'] = set_combine(sets.WS.Elemental,{
-		neck="Soil Gorget",
-		waist="Soil Belt",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
 	})
 
 	sets.WS['Evisceration'] = set_combine(sets.WS['Blade: Hi'],{
-		neck="Soil Gorget",
+		neck="Fotia Gorget",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','Weapon skill damage +10%',}},
 	})
 
@@ -240,17 +247,18 @@ function get_sets()
 	sets.Idle = set_combine(
 		NIN.main, NIN.sub, NIN.range, NIN.ammo,
 	{
-		head="Hiza. Somen +2",
+    		head="Hachi. Hatsu. +4",
 		neck="Combatant's Torque",
 		left_ear="Brutal Earring",
-		right_ear="Suppanomimi",
+		right_ear="Cessance Earring",
 		body="Hiza. Haramaki +2",
-		hands="Hizamaru Kote +2",
+    		hands={ name="Tatena. Gote +1", augments={'Path: A',}},
 		left_ring="Defending Ring",
 		right_ring="Shneddick Ring",
     		back={ name="Andartia's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Damage taken-5%',}},
     		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
-		legs="Hattori Hakama +2",
+		-- legs="Hattori Hakama +2",
+		legs={ name="Tatena. Haidate +1", augments={'Path: A',}},
 		feet="Hattori Kyahan +3",
 	})
 

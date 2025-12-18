@@ -9,14 +9,13 @@ function get_sets()
 	WAR.sub = { sub="" }
 	-- sub="Blurred Shield +1" 
 	-- WAR.range = { range="" }
-	WAR.ammo = { ammo="Iron Gobbet" }
-	-- ammo="Iron Gobbet" "Per. Lucky Egg"
+	WAR.ammo = { ammo="Knobkierrie" }
+	-- ammo="Knobkierrie" "Crepuscular Pebble" "Per. Lucky Egg"
 
 	-- WAR INIT
 	-- Nyame 	"Nyame Helm" 		"Nyame Mail" 		"Nyame Gauntlets" 	"Nyame Flanchard" 	"Nyame Sollerets"
-	-- Sakpata 	"Sakpata's Helm"	"Sakpata's Plate"	"Sakpata's Gauntlets"	"Sakpata's Cuisses"	"Sakpata's Leggings"
-	-- Flamma	"Flam. Zucchetto +2"	"Flam. Manopolas +2"	
-	-- Sulevia	"Sulevia's Mask +2"	"Sulevia's Plate +2"	"Sulev. Gauntlets +2"	"Sulev. Cuisses +2"	"Sulev. Leggings +2"
+	-- Sakpata 	"Sakpata's Helm"	"Sakpata's Plate"	"Sakpata's Gauntlets"	"Sakpata's Cuisses"	"Sakpata's Leggings"	
+	-- Sulevia	"Sulev. Leggings +2"
 
 	sets.precast = {}
 
@@ -39,10 +38,10 @@ function get_sets()
 		neck="Combatant's Torque",
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Brutal Earring",
-    		right_ear="Digni. Earring",
+    		right_ear="Boii Earring",
     		left_ring="Flamma Ring",
     		right_ring="Rajas Ring",
-    		back="Mauler's Mantle",	
+    		back="Null Shawl",	
 
 	}
 
@@ -56,10 +55,10 @@ function get_sets()
 		neck="Combatant's Torque",
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Brutal Earring",
-    		right_ear="Digni. Earring",
+    		right_ear="Boii Earring",
     		left_ring="Defending Ring",
     		right_ring="Rajas Ring",
-    		back="Mauler's Mantle",	
+    		back="Null Shawl",	
 	}
 
 	sets.TP.DT = sets.DT
@@ -80,7 +79,7 @@ function get_sets()
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Thrud Earring",
     		right_ear="Moonshade Earring",
-    		left_ring="Rufescent Ring",
+    		left_ring="Regal Ring",
     		right_ring="Cornelia's Ring",
     		back="Mauler's Mantle",	
 	}
@@ -98,10 +97,10 @@ function get_sets()
 		neck="Combatant's Torque",
    		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
     		left_ear="Brutal Earring",
-    		right_ear="Digni. Earring",
+    		right_ear="Boii Earring",
     		left_ring="Defending Ring",
     		right_ring="Shneddick Ring",
-    		back="Mauler's Mantle",	
+    		back="Null Shawl",	
 	})
 
 end
