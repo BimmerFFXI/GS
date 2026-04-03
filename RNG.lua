@@ -124,15 +124,15 @@ function get_sets()
 	Ammo.Arrow.MAG_WS = "Chrono Arrow"		-- Magic Weaponskills (Not consumed)
 	Ammo.Arrow.PHY_WS = "Chrono Arrow"		-- Magic Weaponskills (Not Consumed)
 
-	Ammo.Bolt.RA = "Bronze Bolt"			-- TP Ammo
-	Ammo.Bolt.ACC = "Bronze Bolt"			-- Accuracy Ammo
-	Ammo.Bolt.CRIT = "Bronze Bolt"		-- Critical Hit Mode Ammo
-	Ammo.Bolt.WS = "Bronze Bolt"			-- Physical Weaponskills (consumed)
-	Ammo.Bolt.WSD = "Bronze Bolt"			-- Physical Weaponskills (not consumed)
-	Ammo.Bolt.MAB = "Bronze Bolt"			-- Magical Weaponskills
-	Ammo.Bolt.MACC = "Bronze Bolt"		-- Magic Accuracy
-	Ammo.Bolt.MAG_WS = "Bronze Bolt"		-- Magic  (Not consumed)
-	Ammo.Bolt.PHY_WS = "Bronze Bolt"		-- Magic Weaponskills (Not Consumed)
+	Ammo.Bolt.RA = "Quelling Bolt"			-- TP Ammo
+	Ammo.Bolt.ACC = "Quelling Bolt"			-- Accuracy Ammo
+	Ammo.Bolt.CRIT = "Quelling Bolt"		-- Critical Hit Mode Ammo
+	Ammo.Bolt.WS = "Quelling Bolt"			-- Physical Weaponskills (consumed)
+	Ammo.Bolt.WSD = "Quelling Bolt"			-- Physical Weaponskills (not consumed)
+	Ammo.Bolt.MAB = "Quelling Bolt"			-- Magical Weaponskills
+	Ammo.Bolt.MACC = "Quelling Bolt"		-- Magic Accuracy
+	Ammo.Bolt.MAG_WS = "Quelling Bolt"		-- Magic  (Not consumed)
+	Ammo.Bolt.PHY_WS = "Quelling Bolt"		-- Magic Weaponskills (Not Consumed)
 
 	--Modes to select correct ammo based off weapon type
 	Ammo.RA = Ammo[state.RAMode.value].RA
@@ -171,7 +171,7 @@ function get_sets()
 	sets.Idle.Resting = set_combine(sets.Idle, {})
 
 	sets.Movement = {
-		feet="Skd. Jambeaux +1",
+		feet="Jute Boots +1",
 	}
 
 	-- Set to be used if you get cursna casted on you
@@ -392,10 +392,10 @@ function get_sets()
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Arc. Braccae +4", augments={'Enhances "Eagle Eye Shot" effect',}},
 		feet="Amini Bottillons +3",
-		neck="Breeze Gorget",
+		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear={ name="Amini Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+7','Mag. Acc.+7',}},
+		right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
 		left_ring="Cornelia's Ring",
 		right_ring="Karieyh Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}}, -- Add Melee Cape
@@ -409,10 +409,10 @@ function get_sets()
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Arc. Braccae +4", augments={'Enhances "Eagle Eye Shot" effect',}},
 		feet="Amini Bottillons +3",
-		neck="Light Gorget",
+		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear={ name="Amini Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+7','Mag. Acc.+7',}},
+		right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
 		left_ring="Cornelia's Ring",
 		right_ring="Karieyh Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
@@ -452,7 +452,7 @@ function get_sets()
 		neck="Rep. Plat. Medal",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear={ name="Amini Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+7','Mag. Acc.+7',}},
+		right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
 		left_ring="Cornelia's Ring",
 		right_ring="Sroda Ring",
 		back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -507,10 +507,10 @@ function get_sets()
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Arc. Braccae +4", augments={'Enhances "Eagle Eye Shot" effect',}},
 		feet="Amini Bottillons +3",
-		neck="Breeze Gorget",
+		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'Rng.Atk.+4','TP Bonus +250',}},
-		right_ear={ name="Amini Earring", augments={'System: 1 ID: 1676 Val: 0','Accuracy+7','Mag. Acc.+7',}},
+		right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
 		left_ring="Cornelia's Ring",
 		right_ring="Karieyh Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
