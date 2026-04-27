@@ -134,7 +134,7 @@ function get_sets()
 
 	-- Gear to swap out for Movement
 	sets.Movement = {
-		legs="Blood Cuisses",
+		legs={ name="Carmine Cuisses +1", augments={'----------------',}},
 	}
 
 	-- Set to be used if you get 
@@ -222,8 +222,8 @@ function get_sets()
 	sets.Precast.FastCast = {
 		ammo="Impatiens", -- 2 Quick Magic
 		head={ name="Merlinic Hood", augments={'Pet: Mag. Acc.+1','CHR+10','"Fast Cast"+5','Accuracy+6 Attack+6',}}, --11
-		body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}}, -- 15
-		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, -- 8
+		body={ name="Viti. Tabard +4", augments={'Enhances "Chainspell" effect',}}, -- 15
+		hands={ name="Leyline Gloves", augments={'Accuracy+5','"Mag.Atk.Bns."+7','"Fast Cast"+1',}}, -- 6
 		legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 7
 		feet={ name="Merlinic Crackows", augments={'Weapon skill damage +2%','MND+10','"Fast Cast"+7',}}, --12
 		neck={ name="Unmoving Collar +1", augments={'Path: A',}, priority=3},
@@ -263,8 +263,8 @@ function get_sets()
 	sets.Midcast.Utsusemi = set_combine(sets.Midcast, {
 		ammo="Impatiens", -- 2 Quick Magic
 		head={ name="Merlinic Hood", augments={'Pet: Mag. Acc.+1','CHR+10','"Fast Cast"+5','Accuracy+6 Attack+6',}}, --11
-		body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}}, -- 15
-		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, -- 8
+		body={ name="Viti. Tabard +4", augments={'Enhances "Chainspell" effect',}}, -- 15
+		hands={ name="Leyline Gloves", augments={'Accuracy+5','"Mag.Atk.Bns."+7','"Fast Cast"+1',}}, --6
 		legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 7
 		feet={ name="Merlinic Crackows", augments={'Chance of successful block +1','"Fast Cast"+5',}}, --10
 		neck={ name="Unmoving Collar +1", augments={'Path: A',}, priority=3},
@@ -322,7 +322,7 @@ function get_sets()
 		sub="Ammurapi Shield",
 		ammo="Staunch Tathlum +1",
 		head={ name="Telchine Cap", augments={'"Regen"+2','Enh. Mag. eff. dur. +10',}},
-		body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}}, --15
+		body={ name="Viti. Tabard +4", augments={'Enhances "Chainspell" effect',}}, --15
 		hands="Atrophy Gloves +4", -- 20
 		legs={ name="Telchine Braconi", augments={'"Regen"+2','Enh. Mag. eff. dur. +10',}},
 		feet="Leth. Houseaux +3", -- 35
@@ -346,7 +346,7 @@ function get_sets()
 	sets.Midcast.Enhancing.Skill = set_combine(sets.Midcast.Enhancing, {
 		sub="Ammurapi Shield",
 		head="Befouled Crown",
-		body={ name="Viti. Tabard +3", augments={'Enhances "Chainspell" effect',}},
+		body={ name="Viti. Tabard +4", augments={'Enhances "Chainspell" effect',}},
 		hands={ name="Viti. Gloves +3", augments={'Enhancing Magic duration',}},
 		legs="Atrophy Tights +4",
 		feet="Leth. Houseaux +3",
@@ -364,11 +364,11 @@ function get_sets()
 	-- Enfeebling
 	sets.Midcast.Enfeebling = {
 		ammo="Regal Gem",
-		head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}},
+		head={ name="Viti. Chapeau +4", augments={'Enfeebling Magic duration','Magic Accuracy',}},
 		body="Atrophy Tabard +4",
 		hands="Leth. Ganth. +3",
 		legs={ name="Chironic Hose", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Drain" and "Aspir" potency +8','MND+1','Mag. Acc.+12',}},
-		feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
+		feet={ name="Vitiation Boots +4", augments={'Immunobreak Chance',}},
 		neck={ name="Dls. Torque +2", augments={'Path: A',}},
 		waist={ name="Obstin. Sash", augments={'Path: A',}},
 		left_ear="Regal Earring",
@@ -386,13 +386,13 @@ function get_sets()
 		ammo="Regal Gem", -- 10%
 		body="Lethargy Sayon +3", -- 14%
 		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 10%
-		feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}}, -- 10%
+		feet={ name="Vitiation Boots +4", augments={'Immunobreak Chance',}}, -- 10%
 		neck={ name="Dls. Torque +2", augments={'Path: A',}}, -- 10%
 	})
 
 	-- Duration Based ('Sleep','Sleep II','Sleepga','Sleepga II','Diaga','Dia','Dia II','Dia III','Bio','Bio II','Bio III','Silence','Gravity','Gravity II','Inundation','Break','Breakaga', 'Bind', 'Bind II')
 	sets.Midcast.Enfeebling.Duration = set_combine(sets.Midcast.Enfeebling, {
-		head={ name="Viti. Chapeau +3", augments={'Enfeebling Magic duration','Magic Accuracy',}}, -- 15s (3 seconds x 5 merits)
+		head={ name="Viti. Chapeau +4", augments={'Enfeebling Magic duration','Magic Accuracy',}}, -- 15s (3 seconds x 5 merits)
 		hands="Regal Cuffs", --20% swaps out with Saboteur active
 		right_ear="Snotra Earring", -- 10%
 		left_ring="Kishar Ring", -- 10%
@@ -449,14 +449,14 @@ function get_sets()
 		body="Lethargy Sayon +3",
 		hands="Leth. Ganth. +3",
 		legs="Leth. Fuseau +3",
-		feet="Leth. Houseaux +3",
+		feet={ name="Vitiation Boots +4", augments={'Immunobreak Chance',}},
 		neck="Sibyl Scarf",
 		waist={ name="Acuity Belt +1", augments={'Path: A',}},
 		left_ear="Regal Earring",
 		right_ear="Malignance Earring",
 		left_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 		right_ring="Freke Ring",
-		back="Aurist's Cape +1",
+		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
 
 	sets.Midcast.Burst = set_combine(sets.Midcast.Nuke, {
@@ -501,7 +501,7 @@ function get_sets()
 	-- ===================================================================================================================
 
 	sets.WS = {
-		head="Nyame Helm",
+		head={ name="Viti. Chapeau +4", augments={'Enfeebling Magic duration','Magic Accuracy',}},
 		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",

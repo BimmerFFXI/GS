@@ -153,16 +153,16 @@ function get_sets()
 	sets.OffenseMode.TP = {
 		head="Chass. Tricorne +3",
 		body="Chasseur's Frac +3",
-		hands="Chasseur's Gants +3",
+		hands="Malignance Gloves",
 		legs="Chas. Culottes +3",
 		feet="Malignance Boots",
 		neck="Null Loop",
-		waist="Null Belt",
-		left_ear="Brutal Earring",
-		right_ear="Suppanomimi",
-		left_ring="Rajas Ring",
-		right_ring="Epona's Ring",
-		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dual Wield"+10','Damage taken-5%',}},
+		waist="Sailfi Belt +1",
+		left_ear="Crep. Earring",
+		right_ear="Cessance Earring",
+		left_ring="Epona's Ring",
+		right_ring="Murky Ring",
+		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Damage taken-5%',}},
 	}
 
 	--This set is used when OffenseMode is DT and Enaged

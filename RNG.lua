@@ -28,7 +28,7 @@ state.OffenseMode:options('TP','ACC','DT','PDL','CRIT')
 state.OffenseMode:set('TP')
 
 --Modes for specific to Ranger
-state.WeaponMode:options('Fomalhaut','Annihilator','Naegling','Kraken Club','Tauret','Tauret Gun')
+state.WeaponMode:options('Fomalhaut','Annihilator','Naegling','Kraken Club','Tauret','Tauret Gun','Gastraphetes')
 state.WeaponMode:set('Naegling')
 
 --Enable JobMode for UI.
@@ -93,6 +93,13 @@ function get_sets()
 		main="Naegling",
 		sub="Tauret",
 	}
+	
+	
+	sets.Weapons['Gastraphetes'] = {
+		main={ name="Perun +1", augments={'Path: A',}},
+		sub={ name="Gleti's Knife", augments={'Path: A',}},
+		range={ name="Gastraphetes", augments={'Path: A',}},
+	}
 
 	sets.Weapons.Ranged = {		
 		main={ name="Perun +1", augments={'Path: A',}},
@@ -101,6 +108,20 @@ function get_sets()
 
 	sets.Weapons.Shield = {
 		sub="Nusku Shield",
+	}
+	
+	--Set the ammo type for each WeaponMode (above): Bullet, Arrow, Bolt
+	--This allows for generic gear sets such as ammo=Ammo.RA for Midcast.RA as an example.
+	Ranged_Weapons = {
+		{WeaponMode = "Naegling", Type = "Bullet"},
+		{WeaponMode = "Dolichenus", Type = "Bullet"},
+		{WeaponMode = "Fomalhaut", Type = "Bullet"},
+		{WeaponMode = "Annihilator", Type = "Bullet"},
+		{WeaponMode = "Fail-Not", Type = "Arrow"},
+		{WeaponMode = "Yoichinoyumi", Type = "Arrow"},
+		{WeaponMode = "Gastraphetes", Type = "Bolt"},
+		{WeaponMode = "Kraken Club", Type = "Bolt"},
+		{WeaponMode = "Tauret", Type = "Bullet"},
 	}
 
 	-- Ammo Selection - will choose based off equiped weapon
@@ -171,7 +192,7 @@ function get_sets()
 	sets.Idle.Resting = set_combine(sets.Idle, {})
 
 	sets.Movement = {
-		feet="Jute Boots +1",
+		legs={ name="Carmine Cuisses +1", augments={'----------------',}},
 	}
 
 	-- Set to be used if you get cursna casted on you
