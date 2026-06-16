@@ -106,17 +106,17 @@ function get_sets()
 
 	-- Standard Idle set with -DT,Refresh,Regen and movement gear
 	sets.Idle = {
-		head="Malignance Chapeau",
-		body="Malignance Tabard",
+		head={ name="Viti. Chapeau +4", augments={'Enfeebling Magic duration','Magic Accuracy',}},
+		body="Lethargy Sayon +3",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Malignance Boots",
 		neck="Null Loop",
 		waist="Null Belt",
 		left_ear="Telos Earring",
-		right_ear="Dedition Earring",
+		right_ear="Etiolation Earring",
 		left_ring="Defending Ring",
-		right_ring="Chirich Ring +1",
+		right_ring="Murky Ring",
 		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Damage taken-5%',}},
     }
 	sets.Idle.TP = sets.Idle 
@@ -134,7 +134,7 @@ function get_sets()
 
 	-- Gear to swap out for Movement
 	sets.Movement = {
-		legs={ name="Carmine Cuisses +1", augments={'----------------',}},
+		legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
 	}
 
 	-- Set to be used if you get 
@@ -150,27 +150,28 @@ function get_sets()
 	-- ===================================================================================================================
 
 	-- 'TP','ACC','DT','PDL','SB','Enspell'
-	sets.OffenseMode = {
+		sets.OffenseMode = {
 		head="Malignance Chapeau",
 		body="Malignance Tabard",
 		hands="Malignance Gloves",
 		legs="Malignance Tights",
 		feet="Malignance Boots",
 		neck="Anu Torque",
-		waist="Olseni Belt",
-		left_ear="Telos Earring",
+		waist="Sailfi Belt +1",
+		left_ear="Sherida Earring",
 		right_ear="Dedition Earring",
 		left_ring="Chirich Ring +1",
 		right_ring="Chirich Ring +1",
+		back="Null Shawl",
 	}
 
 	sets.OffenseMode.TP = set_combine(sets.OffenseMode,{ })
-	sets.OffenseMode.DT = set_combine(sets.OffenseMode,{ })
+	sets.OffenseMode.DT = set_combine(sets.OffenseMode,{ })	
 	sets.OffenseMode.ACC = set_combine(sets.OffenseMode,{ })
 	sets.OffenseMode.PDT = set_combine(sets.OffenseMode, { })
 	sets.OffenseMode.MEVA = set_combine(sets.OffenseMode, { })
 
-	sets.OffenseMode.SB = set_combine(sets.OffenseMode, { 
+	sets.OffenseMode.SB = set_combine(sets.OffenseMode, { 	
 		hands="Volte Mittens",
 		legs="Volte Tights",
 		neck="Bathy Choker +1",
@@ -192,7 +193,7 @@ function get_sets()
 		left_ring="Freke Ring",
 		right_ring={ name="Metamor. Ring +1", augments={'Path: A',}},
 		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Weapon skill damage +10%','Damage taken-5%',}},
-	})
+	})	
 
 	sets.DualWield = {
 		waist="Reiki Yotai",
@@ -224,7 +225,7 @@ function get_sets()
 		head={ name="Merlinic Hood", augments={'Pet: Mag. Acc.+1','CHR+10','"Fast Cast"+5','Accuracy+6 Attack+6',}}, --11
 		body={ name="Viti. Tabard +4", augments={'Enhances "Chainspell" effect',}}, -- 15
 		hands={ name="Leyline Gloves", augments={'Accuracy+5','"Mag.Atk.Bns."+7','"Fast Cast"+1',}}, -- 6
-		legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 7
+		legs="Volte Brais", -- 8
 		feet={ name="Merlinic Crackows", augments={'Weapon skill damage +2%','MND+10','"Fast Cast"+7',}}, --12
 		neck={ name="Unmoving Collar +1", augments={'Path: A',}, priority=3},
 		waist="Embla Sash", --5
@@ -299,7 +300,7 @@ function get_sets()
 		head={ name="Kaykaus Mitra +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		body={ name="Kaykaus Bliaut +1", augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}}, -- 6
 		hands={ name="Kaykaus Cuffs +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
-		legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
+		legs="Atrophy Tights +4", -- legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		feet={ name="Kaykaus Boots +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		neck={ name="Loricate Torque +1", augments={'Path: A',}},
 		waist="Sacro Cord",
@@ -347,7 +348,7 @@ function get_sets()
 		sub="Ammurapi Shield",
 		head="Befouled Crown",
 		body={ name="Viti. Tabard +4", augments={'Enhances "Chainspell" effect',}},
-		hands={ name="Viti. Gloves +3", augments={'Enhancing Magic duration',}},
+		hands={ name="Chironic Gloves", augments={'Accuracy+13','Pet: DEX+8','"Refresh"+2','Accuracy+11 Attack+11','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}, -- hands={ name="Viti. Gloves +3", augments={'Enhancing Magic duration',}},
 		legs="Atrophy Tights +4",
 		feet="Leth. Houseaux +3",
 		neck="Incanter's Torque",
@@ -367,15 +368,15 @@ function get_sets()
 		head={ name="Viti. Chapeau +4", augments={'Enfeebling Magic duration','Magic Accuracy',}},
 		body="Atrophy Tabard +4",
 		hands="Leth. Ganth. +3",
-		legs={ name="Chironic Hose", augments={'Mag. Acc.+23 "Mag.Atk.Bns."+23','"Drain" and "Aspir" potency +8','MND+1','Mag. Acc.+12',}},
+		legs={ name="Chironic Hose", augments={'DEX+4','Mag. Acc.+25','"Treasure Hunter"+1','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
 		feet={ name="Vitiation Boots +4", augments={'Immunobreak Chance',}},
-		neck={ name="Dls. Torque +2", augments={'Path: A',}},
-		waist={ name="Obstin. Sash", augments={'Path: A',}},
+		neck="Null Loop", -- { name="Dls. Torque +2", augments={'Path: A',}},
+		waist="Null Belt",
 		left_ear="Regal Earring",
-		right_ear="Snotra Earring",
-		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
-		right_ring={name="Stikini Ring +1", bag="wardrobe1"},
-		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		right_ear="Crep. Earring",
+		left_ring="Crepuscular Ring",
+		right_ring="Metamor. Ring +1",
+		back="Null Shawl",
 	}
 
 	-- Skill Based ('Dispel','Aspir','Aspir II','Aspir III','Drain','Drain II','Drain III','Frazzle','Frazzle II','Stun','Poison','Poison II','Poisonga')
@@ -503,7 +504,7 @@ function get_sets()
 	sets.WS = {
 		head={ name="Viti. Chapeau +4", augments={'Enfeebling Magic duration','Magic Accuracy',}},
 		body="Nyame Mail",
-		hands="Nyame Gauntlets",
+		hands="Atro. Gloves +4",
 		legs="Nyame Flanchard",
 		feet="Leth. Houseaux +3",
 		neck="Rep. Plat. Medal",

@@ -10,7 +10,7 @@ AutoItem = false
 Random_Lockstyle = false
 
 --Lockstyle sets to randomly equip
-Lockstyle_List = {1,2,6,12}
+Lockstyle_List = {1}
 
 --Set to ingame lockstyle and Macro Book/Set
 LockStylePallet = "1"
@@ -28,7 +28,7 @@ state.OffenseMode:options('TP','ACC','DT','PDL','CRIT')
 state.OffenseMode:set('TP')
 
 --Modes for specific to Ranger
-state.WeaponMode:options('Fomalhaut','Annihilator','Naegling','Kraken Club','Tauret','Tauret Gun','Gastraphetes')
+state.WeaponMode:options('Fomalhaut','Annihilator','Naegling','Kraken Club','Malevolence','Gastraphetes')
 state.WeaponMode:set('Naegling')
 
 --Enable JobMode for UI.
@@ -82,18 +82,12 @@ function get_sets()
 		ammo="",
 	}
 	
-	sets.Weapons['Tauret'] = {
-		main="Tauret",
+	sets.Weapons['Malevolence'] = {
+		main={ name="Malevolence", augments={'INT+9','Mag. Acc.+10','"Mag.Atk.Bns."+9','"Fast Cast"+4',}},
 		sub="Kraken Club",
 		range={ name="Sparrowhawk +2", augments={'TP Bonus +1000',}},
 		ammo="Hauksbok Arrow",
 	}
-	
-	sets.Weapons['Tauret Gun'] = {
-		main="Naegling",
-		sub="Tauret",
-	}
-	
 	
 	sets.Weapons['Gastraphetes'] = {
 		main={ name="Perun +1", augments={'Path: A',}},
@@ -119,9 +113,8 @@ function get_sets()
 		{WeaponMode = "Annihilator", Type = "Bullet"},
 		{WeaponMode = "Fail-Not", Type = "Arrow"},
 		{WeaponMode = "Yoichinoyumi", Type = "Arrow"},
+		{WeaponMode = "Malevolence", Type = "Bullet"},
 		{WeaponMode = "Gastraphetes", Type = "Bolt"},
-		{WeaponMode = "Kraken Club", Type = "Bolt"},
-		{WeaponMode = "Tauret", Type = "Bullet"},
 	}
 
 	-- Ammo Selection - will choose based off equiped weapon
@@ -177,7 +170,7 @@ function get_sets()
 		neck="Rep. Plat. Medal",
 		waist="Null Belt",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear="Tracker's Earring",
+		right_ear={ name="Amini Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 AGI+7',}},
 		left_ring="Defending Ring",
 		right_ring="Karieyh Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},
@@ -192,7 +185,7 @@ function get_sets()
 	sets.Idle.Resting = set_combine(sets.Idle, {})
 
 	sets.Movement = {
-		legs={ name="Carmine Cuisses +1", augments={'----------------',}},
+		legs={ name="Carmine Cuisses +1", augments={'Accuracy+20','Attack+12','"Dual Wield"+6',}},
 	}
 
 	-- Set to be used if you get cursna casted on you
@@ -211,18 +204,18 @@ function get_sets()
 
 	--Set focuses on maximum TP gain
 	sets.OffenseMode.TP = {
-		head="Malignance Chapeau",
-		body="Malignance Tabard",
-	    hands="Amini Glove. +3",
-		legs="Amini Bragues +3",
-		feet="Malignance Boots",
+		head="Malignance Chapeau", -- 6
+		body="Malignance Tabard", -- 9
+	    hands="Amini Glove. +3", -- 11
+		legs="Amini Bragues +3", -- 13
+		feet="Malignance Boots", -- 4
 		neck="Combatant's Torque",
 		waist="Olseni Belt",
 		left_ear="Telos Earring",
 		right_ear="Dedition Earring",
-		left_ring="Chirich Ring +1",
-		right_ring="Chirich Ring +1",
-		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Damage taken-5%',}},
+		left_ring={ name="Chirich Ring +1", bag="wardrobe1", priority=2},
+		right_ring={ name="Chirich Ring +1", bag="wardrobe2", priority=1},
+		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Damage taken-5%',}}, --5
 	}
 
 	--This set is used when OffenseMode is set to DT and enaged
@@ -233,11 +226,11 @@ function get_sets()
 		legs="Amini Bragues +3",
 		feet="Malignance Boots",
 		neck="Null Loop",
-		waist="Null Belt",
+		waist="Olseni Belt",
 		left_ear="Telos Earring",
 		right_ear="Dedition Earring",
-		left_ring="Defending Ring",
-		right_ring="Chirich Ring +1",
+		left_ring={ name="Chirich Ring +1", bag="wardrobe1", priority=2},
+		right_ring={ name="Chirich Ring +1", bag="wardrobe2", priority=1},
 		back={ name="Belenus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','"Dual Wield"+10','Damage taken-5%',}},
     })
 
@@ -253,7 +246,7 @@ function get_sets()
 	--This set is used when OffenseMode is ACC and Enaged (Augments the TP base set)
 	sets.OffenseMode.ACC = set_combine(sets.OffenseMode.DT, {
 		neck="Null Loop",
-		left_ring="Rajas Ring",
+		belt="Null Belt"
 	})
 
 	--This set is used when OffenseMode is CRIT and Engaged
@@ -325,12 +318,12 @@ function get_sets()
 		hands="Ikenga's Gloves",
 		legs="Ikenga's Trousers",
 		feet="Ikenga's Clogs",
-		neck="Combatant's Torque",
+		neck={ name="Scout's Gorget +2", augments={'Path: A',}},
 		waist="Elanid Belt",
 		left_ear="Telos Earring",
 		right_ear="Dedition Earring",
-		left_ring="Chirich Ring +1",
-		right_ring="Ilabrat Ring",
+		left_ring="Ilabrat Ring",
+		right_ring="Regal Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','"Store TP"+10','Damage taken-5%',}},
 }) -- With Recycle Merits 101 Recycle for TP bonus and Ammo Save
 
@@ -343,13 +336,13 @@ function get_sets()
 
 	-- Ranged Attack Gear (Physical Damage Limit)
     sets.Midcast.RA.PDL = set_combine(sets.Midcast.RA, {
-		head={ name="Ikenga's Hat", augments={'Path: A',}},
-		body={ name="Ikenga's Vest", augments={'Path: A',}},
-		hands={ name="Ikenga's Gloves", augments={'Path: A',}},
-		legs={ name="Ikenga's Trousers", augments={'Path: A',}},
-		feet={ name="Ikenga's Clogs", augments={'Path: A',}},
+		body="Ikenga's Vest",
+		hands="Ikenga's Gloves",
+		neck={ name="Scout's Gorget +2", augments={'Path: A',}},
+		right_ear={ name="Amini Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 AGI+7',}},
 		right_ring="Sroda Ring",
     })
+
 
 	-- Ranged Attack Gear (Critical Build)
     sets.Midcast.RA.CRIT = set_combine(sets.Midcast.RA, {
@@ -416,9 +409,9 @@ function get_sets()
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
+		right_ear={ name="Amini Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 AGI+7',}},
 		left_ring="Cornelia's Ring",
-		right_ring="Karieyh Ring",
+		right_ring="Regal Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}}, -- Add Melee Cape
 	}
 
@@ -433,9 +426,9 @@ function get_sets()
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
+		right_ear={ name="Amini Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 AGI+7',}},
 		left_ring="Cornelia's Ring",
-		right_ring="Karieyh Ring",
+		right_ring="Regal Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
 })
 
@@ -465,7 +458,7 @@ function get_sets()
 	-- Weapon Skill Damage (Melee)
 	sets.WS.WSD = set_combine(sets.WS, {
 		ammo=Ammo.WSD,
-		head="Orion Beret +4",
+		head="Nyame Helm",
 		body={ name="Nyame Mail", augments={'Path: B',}},
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
@@ -473,7 +466,7 @@ function get_sets()
 		neck="Rep. Plat. Medal",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
+		right_ear="Sherida Earring",
 		left_ring="Cornelia's Ring",
 		right_ring="Sroda Ring",
 		back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -491,13 +484,13 @@ function get_sets()
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Nyame Sollerets",
-		neck="Sibyl Scarf",
-		waist="Eschan Stone",
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
-		right_ear="Novio Earring",
+		right_ear="Friomisi Earring",
 		left_ring="Cornelia's Ring",
-		right_ring="Karieyh Ring",
-		back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
+		right_ring="Dingir Ring",
+		back={ name="Belenus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
 	sets.WS["Split Shot"] = set_combine(sets.WS.RA, {})
 	sets.WS["Sniper Shot"] = set_combine(sets.WS.RA, {})
@@ -511,12 +504,12 @@ function get_sets()
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Nyame Sollerets",
-		neck="Sibyl Scarf",
-		waist="Eschan Stone",
+		neck={ name="Scout's Gorget +2", augments={'Path: A',}},
+		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 		right_ear="Friomisi Earring",
 		left_ring="Cornelia's Ring",
-		right_ring="Karieyh Ring",
+		right_ring="Dingir Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 		-- Get Cremation Earring since doesn't scale with TP
 	})
@@ -531,7 +524,7 @@ function get_sets()
 		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear={ name="Moonshade Earring", augments={'Rng.Atk.+4','TP Bonus +250',}},
-		right_ear={ name="Amini Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+12','Mag. Acc.+12','Crit.hit rate+4',}},
+		right_ear={ name="Amini Earring +2", augments={'System: 1 ID: 1676 Val: 0','Accuracy+16','Mag. Acc.+16','Crit.hit rate+6','STR+7 AGI+7',}},
 		left_ring="Cornelia's Ring",
 		right_ring="Karieyh Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
@@ -576,12 +569,12 @@ function get_sets()
 		hands={ name="Nyame Gauntlets", augments={'Path: B',}},
 		legs={ name="Nyame Flanchard", augments={'Path: B',}},
 		feet="Nyame Sollerets",
-		neck="Sibyl Scarf",
+		neck="Baetyl Pendant",
 		waist="Eschan Stone",
 		left_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
 		right_ear="Friomisi Earring",
 		left_ring="Cornelia's Ring",
-		right_ring="Karieyh Ring",
+		right_ring="Dingir Ring",
 		back={ name="Belenus's Cape", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	})
 

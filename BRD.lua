@@ -105,16 +105,16 @@ function get_sets()
 	sets.Idle = {
 		range=Instrument.Idle,  -- 4/0
 		head="Fili Calot +3", -- 11/11
-		body="Adamantite Armor", -- 20/20
+		body="Fili Hongreline +3",
 		hands="Bunzi's Gloves", -- 8/8 
 		legs="Fili Rhingrave +3", -- 13/13
 		feet="Fili Cothurnes +3", -- 18% Movement
 		neck="Warder's Charm +1",
-		waist="Carrier's Sash",
+		waist="Null Belt",
 		left_ear={ name="Odnowa Earring +1", augments={'Path: A',}}, -- 3/3
 		right_ear="Sanare Earring",
-		left_ring="Warden's Ring",
-		right_ring="Shadow Ring",
+		left_ring="Murky Ring", -- 10
+		right_ring="Defending Ring", -- 10
 		back={ name="Intarabus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Waltz" potency +10%','Mag. Evasion+15',}},
     }
 
@@ -151,17 +151,16 @@ function get_sets()
 
 	--Base TP set to build off
 	sets.OffenseMode.TP = {
-		range=Instrument.TP,
-		head={ name="Bunzi's Hat", augments={'Path: A',}},
-		body="Ashera Harness",
-		hands={ name="Bunzi's Gloves", augments={'Path: A',}},
-		legs="Volte Tights",
-		feet="Nyame Sollerets",
-		neck={ name="Bard's Charm +2", augments={'Path: A',}},
-		waist="Windbuffet Belt +1", -- swapped out with Dual Wield
+		head="Nyame Helm", -- 9
+		body="Nyame Mail", -- 7
+		hands="Bunzi's Gloves", -- 8
+		legs="Nyame Flanchard", -- 8
+		feet="Nyame Sollerets", -- 7
+		neck="Combatant's Torque",
+		waist="Reiki Yotai",
 		left_ear="Telos Earring",
-		right_ear="Balder Earring +1",
-		left_ring="Lehko's Ring",
+		right_ear="Dedition Earring",
+		left_ring="Murky Ring", -- 10
 		right_ring={ name="Chirich Ring +1", bag="wardrobe2", priority=1},
 		back="Null Shawl",
 	}
@@ -173,7 +172,19 @@ function get_sets()
 	})
 
 	--This set is used when OffenseMode is ACC and Enaged (Augments the TP base set)
-	sets.OffenseMode.ACC = set_combine(sets.OffenseMode.TP, {})
+	sets.OffenseMode.ACC = set_combine(sets.OffenseMode.TP, {
+		head="Nyame Helm",
+		body="Fili Hongreline +3",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Nyame Sollerets",
+		neck="Null Loop",
+		waist="Null Belt",
+		left_ear="Telos Earring",
+		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}},
+		left_ring="Chirich Ring +1",
+		right_ring="Chirich Ring +1",
+	})
 
 	--This set is used when OffenseMode is PDL and Enaged
 	sets.OffenseMode.PDL = set_combine(sets.OffenseMode.TP, {
@@ -203,15 +214,15 @@ function get_sets()
 		range=Instrument.QuickMagic, -- 4 Quick Magic
 		head={ name="Bunzi's Hat", augments={'Path: A',}}, -- 10
 		body="Inyanga Jubbah +2", -- 14
-		hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}}, -- 8
-		legs="Volte Brais", -- 9
+		hands={ name="Leyline Gloves", augments={'Accuracy+12','Mag. Acc.+14','"Mag.Atk.Bns."+15','"Fast Cast"+2',}}, --7
+		legs="Volte Brais", -- 8
 		feet="Fili Cothurnes +3", -- 13
-		neck="Voltsurge Torque", -- 4
-		waist="Witful Belt", -- 3 3 Quick Magic
+		neck="Baetyl Pendant", -- 4
+		waist="Embla Sash", --5
 		left_ear="Etiolation Earring", -- 1
-		right_ear={ name="Tuisto Earring", priority=1,},
+		right_ear="Loquac. Earring", --2
 		left_ring="Kishar Ring", -- 4
-		right_ring="Weather. Ring", -- 5 3 Quick Magic
+		right_ring="Weather. Ring",
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 10
 	} -- 81 FC and 10 Quick Magic
 
@@ -316,22 +327,37 @@ function get_sets()
 	sets.Midcast.Enfeebling = {
 		sub="Ammurapi Shield",
 		range=Instrument.Potency,
-		head="Brioso Roundlet +4",
-		body="Brioso Just. +4",
-		hands="Brioso Cuffs +4",
+		head="Brioso Roundlet +3",
+		body="Fili Hongreline +3",
+		hands="Fili Manchettes +3",
 		legs="Fili Rhingrave +3",
 		feet="Brioso Slippers +4",
 		neck="Mnbw. Whistle +1",
 		waist="Null Belt",
 		left_ear="Regal Earring",
 		right_ear="Crep. Earring",
-		left_ring="Stikini Ring +1",
-		right_ring="Stikini Ring +1",
-		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		left_ring="Crepuscular Ring",
+		right_ring="Metamor. Ring +1",
+		back="Null Shawl",
 	}
 
 	sets.Midcast.Enfeebling.MACC = {}
-	sets.Midcast.Enfeebling.Potency = {}
+	sets.Midcast.Enfeebling.Potency = {
+		sub="Ammurapi Shield",
+		range=Instrument.Potency,
+		head="Brioso Roundlet +3",
+		body="Fili Hongreline +3",
+		hands="Fili Manchettes +3",
+		legs="Fili Rhingrave +3",
+		feet="Brioso Slippers +4",
+		neck="Mnbw. Whistle +1",
+		waist="Null Belt",
+		left_ear="Regal Earring",
+		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}},
+		left_ring="Crepuscular Ring",
+		right_ring="Metamor. Ring +1",
+		back="Null Shawl",
+	}
 	sets.Midcast.Enfeebling.Duration = {}
 
 	-- Bard Specific Sets
@@ -394,7 +420,7 @@ function get_sets()
 	sets.WS = {
 		range=Instrument.WS,
 		head="Nyame Helm",
-		body="Bihu Just. +4",
+		body="Nyame Mail",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",
@@ -403,8 +429,8 @@ function get_sets()
 		left_ear="Moonshade Earring",
 		right_ear="Regal Earring",
 		left_ring="Sroda Ring",
-		right_ring="Epaminondas's Ring",
-		back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Damage taken-5%',}},
+		right_ring="Cornelia's Ring",
+		back="Null Shawl",
 	}
 
 	-- Equipment to augment the Melee WS for Physical Damage Limit (Capped Attack)
