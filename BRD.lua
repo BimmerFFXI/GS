@@ -31,12 +31,12 @@ function get_sets()
 
 	sets.Weapons['Mordant Rime'] = {
 		main={ name="Carnwenhan", augments={'Path: A',}},
-		sub="Crepuscular Knife",
+		sub="Centovente",
 	}
 
 	sets.Weapons['Aeolian Edge'] = {
 		main={ name="Carnwenhan", augments={'Path: A',}},
-		sub={ name="Gleti's Knife", augments={'Path: A',}},
+		sub="Centovente",
 	}
 
 	sets.Weapons['Shining Strike'] = {
@@ -51,7 +51,7 @@ function get_sets()
 
 	sets.Weapons['Savage Blade'] = {
 		main="Naegling",
-		sub={ name="Fusetto +2", augments={'TP Bonus +1000',}},
+		sub="Centovente",
 	}
 
 	sets.Weapons['Staff'] = {
@@ -71,7 +71,7 @@ function get_sets()
 
 	sets.Weapons.Songs = {
 		main={ name="Carnwenhan", augments={'Path: A',}},
-		sub={ name="Kali", augments={'Mag. Acc.+15','String instrument skill +10','Wind instrument skill +10',}},
+		sub="Kali",
 	}
 
 	sets.Weapons.Shield = { sub="Genmei Shield",}
@@ -115,8 +115,8 @@ function get_sets()
 		right_ear="Sanare Earring",
 		left_ring="Murky Ring", -- 10
 		right_ring="Defending Ring", -- 10
-		back={ name="Intarabus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Waltz" potency +10%','Mag. Evasion+15',}},
-    }
+		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+	}
 
 	sets.Idle.Resting = set_combine(sets.Idle, {})
 
@@ -151,12 +151,12 @@ function get_sets()
 
 	--Base TP set to build off
 	sets.OffenseMode.TP = {
-		head="Nyame Helm", -- 9
-		body="Nyame Mail", -- 7
+		head="Aya. Zucchetto +2", -- 3
+		body="Ayanmo Corazza +2", -- 6
 		hands="Bunzi's Gloves", -- 8
 		legs="Nyame Flanchard", -- 8
 		feet="Nyame Sollerets", -- 7
-		neck="Combatant's Torque",
+		neck="Null Loop",
 		waist="Reiki Yotai",
 		left_ear="Telos Earring",
 		right_ear="Dedition Earring",
@@ -223,7 +223,7 @@ function get_sets()
 		right_ear="Loquac. Earring", --2
 		left_ring="Kishar Ring", -- 4
 		right_ring="Weather. Ring",
-		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 10
+		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	} -- 81 FC and 10 Quick Magic
 
 	-- Used for Songs (now easy to max Fast Cast so not needed)
@@ -371,7 +371,7 @@ function get_sets()
 
 	sets.Midcast.Finale = {}
 	sets.Midcast.Requiem = {}
-	sets.Midcast.Elegy = {range="range=Instrument.Count"}
+	sets.Midcast.Elegy = {range="Daurdabla"}
 	sets.Midcast.Prelude = {}
 	sets.Midcast.Madrigal = {head="Fili Calot +3"}
     sets.Midcast.Minuet = {body="Fili Hongreline +3"}
@@ -430,7 +430,7 @@ function get_sets()
 		right_ear="Regal Earring",
 		left_ring="Sroda Ring",
 		right_ring="Cornelia's Ring",
-		back="Null Shawl",
+		back={ name="Intarabus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%','Phys. dmg. taken-10%',}},
 	}
 
 	-- Equipment to augment the Melee WS for Physical Damage Limit (Capped Attack)
