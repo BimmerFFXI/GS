@@ -109,7 +109,7 @@ function get_sets()
 		hands="Bunzi's Gloves", -- 8/8 
 		legs="Fili Rhingrave +3", -- 13/13
 		feet="Fili Cothurnes +3", -- 18% Movement
-		neck="Warder's Charm +1",
+		neck={ name="Bard's Charm +2", augments={'Path: A',}},
 		waist="Null Belt",
 		left_ear={ name="Odnowa Earring +1", augments={'Path: A',}}, -- 3/3
 		right_ear="Sanare Earring",
@@ -156,7 +156,7 @@ function get_sets()
 		hands="Bunzi's Gloves", -- 8
 		legs="Nyame Flanchard", -- 8
 		feet="Nyame Sollerets", -- 7
-		neck="Null Loop",
+		neck={ name="Bard's Charm +2", augments={'Path: A',}},
 		waist="Reiki Yotai",
 		left_ear="Telos Earring",
 		right_ear="Dedition Earring",
@@ -396,9 +396,9 @@ function get_sets()
 
 	-- Job Abilities
 	sets.JA = {}
-	sets.JA["Nightingale"] = {feet={ name="Bihu Slippers +4", augments={'Enhances "Nightingale" effect',}}}
+	sets.JA["Nightingale"] = {feet={ name="Bihu Slippers", augments={'Enhances "Nightingale" effect',}}}
 	sets.JA["Troubadour"] = {body={ name="Bihu Just. +4", augments={'Enhances "Troubadour" effect',}},}
-	sets.JA["Soul Voice"] = {legs={ name="Bihu Cannions +4", augments={'Enhances "Soul Voice" effect',}}}
+	sets.JA["Soul Voice"] = {legs={ name="Bihu Cannions", augments={'Enhances "Soul Voice" effect',}}}
 	sets.JA["Tenuto"] = {}
 	sets.JA["Marcato"] = {}
 	sets.JA["Clarion"] = {}
@@ -420,7 +420,7 @@ function get_sets()
 	sets.WS = {
 		range=Instrument.WS,
 		head="Nyame Helm",
-		body="Nyame Mail",
+		body="Bihu Just. +4",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
 		feet="Nyame Sollerets",

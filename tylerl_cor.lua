@@ -114,18 +114,18 @@ function get_sets()
 
 	-- Standard Idle set with -DT,Refresh,Regen with NO movement gear
 	sets.Idle = {
-		head="Chass. Tricorne +3",
-		body="Chasseur's Frac +3",
-		hands="Chasseur's Gants +3",
-		legs="Chas. Culottes +3",
-		feet="Malignance Boots",
-		neck="Null Loop",
-		waist="Null Belt",
-		left_ear="Brutal Earring",
-		right_ear="Suppanomimi",
-		left_ring="Murky Ring",
-		right_ring="Defending Ring",
-		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Damage taken-5%',}},
+		head="Chass. Tricorne +3", --10
+		body="Chasseur's Frac +3", --13
+		hands="Malignance Gloves", --5
+		legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
+		feet="Malignance Boots", --5
+		neck="Null Loop", --5
+		waist="Sailfi Belt +1",
+		left_ear="Crep. Earring",
+		right_ear="Cessance Earring",
+		left_ring="Murky Ring", --10
+		right_ring="Epona's Ring", 
+		back="Null Shawl",
     }
 	sets.Idle.TP = set_combine(sets.Idle, {})
 	sets.Idle.ACC = set_combine(sets.Idle, {})
@@ -151,30 +151,22 @@ function get_sets()
 
 	--Base TP set to build off when melee'n
 	sets.OffenseMode.TP = {
-		head="Chass. Tricorne +3",
-		body="Chasseur's Frac +3",
-		hands="Malignance Gloves",
-		legs="Chas. Culottes +3",
-		feet="Malignance Boots",
-		neck="Null Loop",
+		head="Chass. Tricorne +3", --10
+		body="Chasseur's Frac +3", --13
+		hands="Malignance Gloves", --5
+		legs={ name="Samnuha Tights", augments={'STR+10','DEX+10','"Dbl.Atk."+3','"Triple Atk."+3',}},
+		feet="Malignance Boots", --5
+		neck="Null Loop", --5
 		waist="Sailfi Belt +1",
 		left_ear="Crep. Earring",
 		right_ear="Cessance Earring",
-		left_ring="Epona's Ring",
-		right_ring="Murky Ring",
-		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Damage taken-5%',}},
+		left_ring="Murky Ring", --10
+		right_ring="Epona's Ring", 
+		back="Null Shawl",
 	}
 
 	--This set is used when OffenseMode is DT and Enaged
 	sets.OffenseMode.DT = set_combine(sets.OffenseMode.TP, {
-		head="Chass. Tricorne +3",
-		body="Chasseur's Frac +3",
-		hands="Meg. Gloves +2",
-		legs="Meg. Chausses +1",
-		feet="Meg. Jam. +2",
-		neck="Null Loop",
-		right_ring="Gelatinous Ring",
-		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+5','"Dual Wield"+10','Damage taken-5%',}},
     })
 
 	--This set is used when OffenseMode is PDL and Enaged
@@ -458,7 +450,7 @@ function get_sets()
     legs="Nyame Flanchard",
     feet="Nyame Sollerets",
     neck="Rep. Plat. Medal",
-    waist="Null Belt",
+	waist="Sailfi Belt +1",
     left_ear="Moonshade Earring",
     right_ear="Brutal Earring",
     left_ring="Epona's Ring",
@@ -585,7 +577,7 @@ function get_sets()
     left_ear="Moonshade Earring",
     right_ear="Friomisi Earring",
     left_ring="Archon Ring",
-    right_ring="Cornelia's Ring",
+    right_ring="Dingir Ring",
     back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	})
 
