@@ -348,7 +348,7 @@ function get_sets()
 		sub="Ammurapi Shield",
 		head="Befouled Crown",
 		body={ name="Viti. Tabard +4", augments={'Enhances "Chainspell" effect',}},
-		hands={ name="Chironic Gloves", augments={'Accuracy+13','Pet: DEX+8','"Refresh"+2','Accuracy+11 Attack+11','Mag. Acc.+7 "Mag.Atk.Bns."+7',}}, -- hands={ name="Viti. Gloves +3", augments={'Enhancing Magic duration',}},
+		hands="Viti. Gloves +4",
 		legs="Atrophy Tights +4",
 		feet="Leth. Houseaux +3",
 		neck="Incanter's Torque",
@@ -359,7 +359,7 @@ function get_sets()
 
 	-- used to boost Gain Spells
 	sets.Midcast.Enhancing.Gain = set_combine(sets.Midcast.Enhancing, {
-		hands={ name="Viti. Gloves +3", augments={'Enhancing Magic duration',}},
+		hands="Viti. Gloves +4",
 	})
 
 	-- Enfeebling
@@ -417,7 +417,7 @@ function get_sets()
 	sets.Midcast["Temper II"] = set_combine(sets.Midcast.Enhancing, {
 		ammo="Psilomene",
 		head="Befouled Crown",
-		hands={ name="Viti. Gloves +3", augments={'Enhancing Magic duration',}},
+		hands="Viti. Gloves +4",
 		legs="Atrophy Tights +4",
 		neck="Incanter's Torque",
 		left_ear="Mimir Earring",

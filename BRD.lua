@@ -93,12 +93,12 @@ function get_sets()
 	Instrument.Pianissimo.Ballad = { name="Miracle Cheer" } -- Possible swap to Miracle Cheer
 	Instrument.AOE_Sleep = { name="Daurdabla" }
 
-	Instrument.Idle = { name="Linos", augments={'Mag. Evasion+15','"Waltz" potency +4%','HP+20',} }
-	Instrument.TP = { name="Linos", augments={'Accuracy+20','"Store TP"+4','Quadruple Attack +3',} }
+	Instrument.Idle = { name="Linos", augments={'Mag. Evasion+14','"Fast Cast"+4',} }
+	Instrument.TP = { name="Linos", augments={'Accuracy+15','"Dbl.Atk."+2','Quadruple Attack +3',} }
 	Instrument.Mordant = { name="Linos", augments={'Accuracy+15 Attack+15','Weapon skill damage +3%','CHR+8',} }
 	Instrument.QuickMagic = { name="Linos", augments={'Mag. Evasion+15','Occ. quickens spellcasting +4%','HP+20',} }
-	Instrument.FastCast = { name="Linos", augments={'Mag. Evasion+15','"Fast Cast"+6','HP+20',} }
-	Instrument.WS = {  name="Linos", augments={'Accuracy+15 Attack+15','Weapon skill damage +3%','STR+8',} }
+	Instrument.FastCast = { name="Linos", augments={'Mag. Evasion+14','"Fast Cast"+4',} }
+	Instrument.WS = {name="Linos", augments={'Attack+18','Weapon skill damage +3%','STR+7',} }
 	Instrument.MAB = {  name="Linos", augments={'Mag.Atk.Bns."+15','Weapon skill damage +3%','INT+8',} }
 
 	-- Standard Idle set
@@ -371,7 +371,7 @@ function get_sets()
 
 	sets.Midcast.Finale = {}
 	sets.Midcast.Requiem = {}
-	sets.Midcast.Elegy = {range="Daurdabla"}
+	sets.Midcast.Elegy = {}
 	sets.Midcast.Prelude = {}
 	sets.Midcast.Madrigal = {head="Fili Calot +3"}
     sets.Midcast.Minuet = {body="Fili Hongreline +3"}
