@@ -104,7 +104,7 @@ function get_sets()
 	-- Standard Idle set
 	sets.Idle = {
 		range=Instrument.Idle,  -- 4/0
-		head="Fili Calot +3", -- 11/11
+		head="Null Masque", -- 10/10
 		body="Fili Hongreline +3",
 		hands="Bunzi's Gloves", -- 8/8 
 		legs="Fili Rhingrave +3", -- 13/13
@@ -112,7 +112,7 @@ function get_sets()
 		neck={ name="Bard's Charm +2", augments={'Path: A',}},
 		waist="Null Belt",
 		left_ear={ name="Odnowa Earring +1", augments={'Path: A',}}, -- 3/3
-		right_ear="Sanare Earring",
+		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
 		left_ring="Murky Ring", -- 10
 		right_ring="Defending Ring", -- 10
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
@@ -181,7 +181,7 @@ function get_sets()
 		neck="Null Loop",
 		waist="Null Belt",
 		left_ear="Telos Earring",
-		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+11','Mag. Acc.+11','Damage taken-3%',}},
+		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
 		left_ring="Chirich Ring +1",
 		right_ring="Chirich Ring +1",
 	})
@@ -239,6 +239,7 @@ function get_sets()
 
 	-- Default song duration / strength
 	sets.Midcast = set_combine(sets.Idle, {
+		sub="Kali",
 		head="Fili Calot +3", -- 11
 		body="Fili Hongreline +3",
 		hands="Fili Manchettes +3", -- 11
