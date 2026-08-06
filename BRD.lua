@@ -261,9 +261,9 @@ function get_sets()
 	sets.Midcast.Cure = {
 		range={ name="Linos", augments={'Mag. Evasion+15','"Fast Cast"+6','HP+20',}},
 		head={ name="Kaykaus Mitra +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
-		body={ name="Kaykaus Bliaut +1", augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}},
+		body="Bunzi's Robe", -- body={ name="Kaykaus Bliaut +1", augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}},
 		hands={ name="Kaykaus Cuffs +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
-		legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
+		legs="Kaykaus Tights +1", -- legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
 		feet={ name="Kaykaus Boots +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
 		neck="Loricate Torque +1",
 		waist="Plat. Mog. Belt",
@@ -504,10 +504,10 @@ function get_sets()
 	})
 
 	sets.TreasureHunter = {
-		body="Volte Jupon",
-		legs="Volte Hose",
-		waist="Chaac Belt",
-	}	
+		head="Volte Cap",
+		legs={ name="Chironic Hose", augments={'DEX+4','Mag. Acc.+25','"Treasure Hunter"+1','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
+	    waist={ name="Tarutaru Sash", augments={'"Treasure Hunter"+1','INT+2','MND+2',}},
+	}
 end
 
 -------------------------------------------------------------------------------------------------------------------

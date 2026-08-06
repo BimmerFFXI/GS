@@ -225,10 +225,12 @@ function get_sets()
 	sets.Saboteur = {hands="Leth. Ganth. +3",}
 
 	sets.TreasureHunter = {
-		ammo="Per. Lucky Egg",
-		-- head="Volte Cap",
+		-- ammo="Per. Lucky Egg",
+		head="Volte Cap",
+		legs={ name="Chironic Hose", augments={'DEX+4','Mag. Acc.+25','"Treasure Hunter"+1','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
 	    -- legs="Volte Hose",
 		-- waist="Chaac Belt",
+	    waist={ name="Tarutaru Sash", augments={'"Treasure Hunter"+1','INT+2','MND+2',}},
 	}
 
 	-- ===================================================================================================================
@@ -304,13 +306,12 @@ function get_sets()
 
 	-- Cure Set
 	sets.Midcast.Cure = {
-		main="Daybreak", -- 30
 		ammo="Staunch Tathlum +1",
-		-- head={ name="Kaykaus Mitra +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
+		head={ name="Kaykaus Mitra +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		body="Bunzi's Robe", -- body={ name="Kaykaus Bliaut +1", augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}}, -- 6
 		-- hands={ name="Kaykaus Cuffs +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
-		legs="Atrophy Tights +4", -- 10 legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
-		-- feet={ name="Kaykaus Boots +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
+		legs="Kaykaus Tights +1", -- 10 legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
+		feet={ name="Kaykaus Boots +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		-- neck={ name="Loricate Torque +1", augments={'Path: A',}},
 		-- waist="Sacro Cord",
 		left_ear={ name="Etiolation Earring", priority=1}, -- Used to Keep HP/MP pool
@@ -399,6 +400,7 @@ function get_sets()
 		right_ear="Snotra Earring",
 		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
 		right_ring={name="Stikini Ring +1", bag="wardrobe1"},
+		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 		-- back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
 	}
 
