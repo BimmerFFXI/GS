@@ -118,7 +118,7 @@ function get_sets()
 		-- right_ear={ name="Odnowa Earring +1", augments={'Path: A',}, priority=2}, --3/5
 		left_ring={name="Stikini Ring +1", bag="wardrobe2"}, -- +1 Refresh
 		right_ring={name="Stikini Ring +1", bag="wardrobe3"}, -- +1 Refresh
-		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Damage taken-5%',}},
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
     }
 	sets.Idle.TP = sets.Idle
 	sets.Idle.ACC = sets.Idle
@@ -155,13 +155,13 @@ function get_sets()
 	-- 'TP','ACC','DT','PDL','SB','Enspell'
 	sets.OffenseMode = {
 		-- ammo={ name="Coiste Bodhar", augments={'Path: A',}},
-		head="Malignance Chapeau",
-		body="Malignance Tabard",
-		hands="Malignance Gloves",
-		legs="Malignance Tights",
-		feet="Malignance Boots",
+		head="Malignance Chapeau", -- 6
+		body="Malignance Tabard", -- 9
+		hands="Malignance Gloves", -- 5
+		legs="Malignance Tights", -- 7
+		feet="Malignance Boots", -- 4
 		neck="Anu Torque",
-		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		waist="Sailfi Belt +1",
 		left_ear="Sherida Earring",
 		right_ear={ name="Leth. Earring +1",},
 		left_ring={name="Chirich Ring +1", bag="wardrobe1"},
@@ -170,7 +170,10 @@ function get_sets()
 	}
 
 	sets.OffenseMode.TP = set_combine(sets.OffenseMode,{ })
-	sets.OffenseMode.DT = set_combine(sets.OffenseMode,{ })
+	sets.OffenseMode.DT = set_combine(sets.OffenseMode,{
+	    right_ring="Murky Ring", -- 10
+		back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Phys. dmg. taken-10%',}}, -- 10
+	})
 	sets.OffenseMode.ACC = set_combine(sets.OffenseMode,{ })
 	sets.OffenseMode.PDT = set_combine(sets.OffenseMode, { })
 	sets.OffenseMode.MEVA = set_combine(sets.OffenseMode, { })
@@ -318,7 +321,7 @@ function get_sets()
 		-- right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
 		-- right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
 		left_ring="Murky Ring",
-		-- back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Phys. dmg. taken-10%',}},
     } -- 50% Cure I, 16% Cure II
 
 	sets.Midcast.Curaga = set_combine(sets.Midcast.Cure, {})
@@ -343,7 +346,7 @@ function get_sets()
 		right_ear="Leth. Earring +1", -- 8
 		left_ring={name="Stikini Ring +1", bag="wardrobe1"},
 		right_ring={name="Stikini Ring +1", bag="wardrobe2"},
-		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 20
+		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Phys. dmg. taken-10%',}}, -- 20
 	} -- 150% Duration
 
 	-- Enhancing Duration on OTHERS
@@ -400,12 +403,13 @@ function get_sets()
 		right_ear="Snotra Earring",
 		left_ring={name="Stikini Ring +1", bag="wardrobe2"},
 		right_ring={name="Stikini Ring +1", bag="wardrobe1"},
-		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
-		-- back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Phys. dmg. taken-10%',}},
 	}
 
 	-- Skill Based ('Dispel','Aspir','Aspir II','Aspir III','Drain','Drain II','Drain III','Frazzle','Frazzle II','Stun','Poison','Poison II','Poisonga')
-	sets.Midcast.Enfeebling.MACC = set_combine(sets.Midcast.Enfeebling, {})
+	sets.Midcast.Enfeebling.MACC = set_combine(sets.Midcast.Enfeebling, {
+		back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	})
 
 	 -- Potency Basted ('Paralyze','Paralyze II','Slow','Slow II','Addle','Addle II','Distract','Distract II','Distract III','Frazzle III','Blind','Blind II')
 	sets.Midcast.Enfeebling.Potency = set_combine(sets.Midcast.Enfeebling, {
