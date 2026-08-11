@@ -16,7 +16,7 @@ state.WeaponMode:options('Mordant Rime','Aeolian Edge','Shining Strike','Shining
 state.WeaponMode:set('Mordant Rime')
 
 --Default to DT Mode
-state.OffenseMode:set('TP')
+state.OffenseMode:set('DT')
 
 -- 'TP','ACC','DT' are standard Default modes.  You may add more and assigne equipsets for them ( Idle.X and OffenseMode.X )
 state.OffenseMode:options('TP','ACC','DT','PDL','SB','MEVA','CRIT') -- ACC effects WS and TP modes
@@ -151,10 +151,11 @@ function get_sets()
 
 	--Base TP set to build off
 	sets.OffenseMode.TP = {
+		range=Instrument.TP,
 		head="Aya. Zucchetto +2", -- 3
 		body="Ayanmo Corazza +2", -- 6
 		hands="Bunzi's Gloves", -- 8
-		legs="Nyame Flanchard", -- 8
+		legs="Fili Rhingrave +3", -- 13
 		feet="Nyame Sollerets", -- 7
 		neck={ name="Bard's Charm +2", augments={'Path: A',}},
 		waist="Reiki Yotai",
@@ -167,7 +168,7 @@ function get_sets()
 
 	--This set is used when OffenseMode is DT and Enaged (Augments the TP base set)
 	sets.OffenseMode.DT = set_combine(sets.OffenseMode.TP, {
-		legs="Fili Rhingrave +3",
+		legs="Fili Rhingrave +3", -- 13
 		right_ring={ name="Moonlight Ring", bag="wardrobe2", priority=1},
 	})
 
