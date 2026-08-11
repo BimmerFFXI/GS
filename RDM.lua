@@ -312,14 +312,14 @@ function get_sets()
 		ammo="Staunch Tathlum +1",
 		head={ name="Kaykaus Mitra +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		body="Bunzi's Robe", -- body={ name="Kaykaus Bliaut +1", augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}}, -- 6
-		-- hands={ name="Kaykaus Cuffs +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
-		legs="Kaykaus Tights +1", -- 10 legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
+		hands="Kaykaus Cuffs +1", -- 11 hands={ name="Kaykaus Cuffs +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
+		legs="Kaykaus Tights +1", -- 11 legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		feet={ name="Kaykaus Boots +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		-- neck={ name="Loricate Torque +1", augments={'Path: A',}},
 		-- waist="Sacro Cord",
 		left_ear={ name="Etiolation Earring", priority=1}, -- Used to Keep HP/MP pool
 		-- right_ear={ name="Odnowa Earring +1", augments={'Path: A',}},
-		-- right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
+		right_ring="Defending Ring", -- right_ring={ name="Gelatinous Ring +1", augments={'Path: A',}},
 		left_ring="Murky Ring",
 		back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','Phys. dmg. taken-10%',}},
     } -- 50% Cure I, 16% Cure II
