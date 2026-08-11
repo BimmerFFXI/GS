@@ -312,8 +312,8 @@ function get_sets()
 		ammo="Staunch Tathlum +1",
 		head={ name="Kaykaus Mitra +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		body="Bunzi's Robe", -- body={ name="Kaykaus Bliaut +1", augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}}, -- 6
-		hands="Kaykaus Cuffs +1", -- 11 hands={ name="Kaykaus Cuffs +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
-		legs="Kaykaus Tights +1", -- 11 legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
+		hands={ name="Kaykaus Cuffs +1", augments={'MP+80','MND+12','Mag. Acc.+20',}}, -- 11
+		legs={ name="Kaykaus Tights +1", augments={'MP+80','MND+12','Mag. Acc.+20',}}, -- 11
 		feet={ name="Kaykaus Boots +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}}, -- 11
 		-- neck={ name="Loricate Torque +1", augments={'Path: A',}},
 		-- waist="Sacro Cord",
