@@ -112,10 +112,10 @@ function get_sets()
 		neck={ name="Bard's Charm +2", augments={'Path: A',}},
 		waist="Null Belt",
 		left_ear={ name="Odnowa Earring +1", augments={'Path: A',}}, -- 3/3
-		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}},
+		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}}, -- 5
 		left_ring="Murky Ring", -- 10
-		right_ring="Defending Ring", -- 10
-		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},
+		right_ring={ name="Chirich Ring +1", bag="wardrobe2", priority=1},
+		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 10
 	}
 
 	sets.Idle.Resting = set_combine(sets.Idle, {})
@@ -263,7 +263,7 @@ function get_sets()
 		range={ name="Linos", augments={'Mag. Evasion+15','"Fast Cast"+6','HP+20',}},
 		head={ name="Kaykaus Mitra +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
 		body="Bunzi's Robe", -- body={ name="Kaykaus Bliaut +1", augments={'MP+80','"Cure" potency +6%','"Conserve MP"+7',}},
-		hands={ name="Kaykaus Cuffs +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
+		hands="Kaykaus Cuffs +1", -- hands={ name="Kaykaus Cuffs +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
 		legs="Kaykaus Tights +1", -- legs={ name="Kaykaus Tights +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
 		feet={ name="Kaykaus Boots +1", augments={'MP+80','"Cure" spellcasting time -7%','Enmity-6',}},
 		neck="Loricate Torque +1",
