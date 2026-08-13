@@ -84,7 +84,7 @@ function get_sets()
 		sub="Tauret",
 		range={ name="Anarchy +2", augments={'Delay:+60','TP Bonus +1000',}},
 	}
-
+	
 	sets.Weapons.Melee = {
 		sub={ name="Gleti's Knife", augments={'Path: A',}},
 	}
@@ -102,15 +102,15 @@ function get_sets()
 	}
 
 	-- Ammo Selection
-	Ammo.Bullet.RA = "Bronze Bullet"		-- TP Ammo Chrono
-	Ammo.Bullet.WS = "Bronze Bullet"		-- Physical Weaponskills
-	Ammo.Bullet.CRIT = "Bronze Bullet"		-- Critical Hit Mode
-	Ammo.Bullet.PDL = "Bronze Bullet"		-- Physical Damage Mode
-	Ammo.Bullet.SB = "Bronze Bullet"		-- Subtle Blow Mode
-	Ammo.Bullet.MAB = "Bronze Bullet"		-- Magical Weaponskills Living
-	Ammo.Bullet.MACC = "Bronze Bullet"		-- Magic Accuracy Chrono
-	Ammo.Bullet.QD = "Bronze Bullet"		-- Quick Draw Hauksbok
-	Ammo.Bullet.MAG_WS = "Bronze Bullet"	-- Magic Weapon Skills Living
+	Ammo.Bullet.RA = "Living Bullet"		-- TP Ammo Chrono
+	Ammo.Bullet.WS = "Living Bullet"		-- Physical Weaponskills
+	Ammo.Bullet.CRIT = "Living Bullet"		-- Critical Hit Mode
+	Ammo.Bullet.PDL = "Living Bullet"		-- Physical Damage Mode
+	Ammo.Bullet.SB = "Living Bullet"		-- Subtle Blow Mode
+	Ammo.Bullet.MAB = "Living Bullet"		-- Magical Weaponskills Living
+	Ammo.Bullet.MACC = "Living Bullet"		-- Magic Accuracy Chrono
+	Ammo.Bullet.QD = "Living Bullet"		-- Quick Draw Hauksbok
+	Ammo.Bullet.MAG_WS = "Living Bullet"	-- Magic Weapon Skills Living
 
 	-- Standard Idle set with -DT,Refresh,Regen with NO movement gear
 	sets.Idle = {
@@ -327,10 +327,10 @@ function get_sets()
 	sets.QuickDraw.DMG = {
 		ammo = Ammo.Bullet.QD,
 		head={ name="Nyame Helm", augments={'Path: B',}},
-		body={ name="Lanun Frac +3", augments={'Enhances "Loaded Deck" effect',}},
+		body="Lanun Frac +4",
 		hands="Nyame Gauntlets",
 		legs="Nyame Flanchard",
-		feet="Chass. Bottes +3",
+		feet="Lanun Bottes +4",
 		neck={ name="Comm. Charm +2", augments={'Path: A',}},
 		waist="Orpheus's Sash",
 		left_ear="Friomisi Earring",
@@ -376,7 +376,7 @@ function get_sets()
 	}
 	sets.JA["Phantom Roll"] = {}
 	sets.JA["Random Deal"] = {
-	    body={ name="Comm. Frac +2", augments={'Enhances "Loaded Deck" effect',}},
+		body="Lanun Frac +4",
 	}
 	sets.JA["Snake Eye"] = {
 	    legs={ name="Lanun Trews +3", augments={'Enhances "Snake Eye" effect',}},
@@ -400,7 +400,7 @@ function get_sets()
 
 	--Base Set used for all rolls
 	sets.PhantomRoll = {
-		main={ name="Lanun Knife", augments={'Path: C',}},
+		main={ name="Rostam", augments={'Path: C',}},
 		sub={ name="Nusku Shield", priority=2},
 		range="Compensator", -- 20 sec Duration
 		head={ name="Lanun Tricorne", augments={'Enhances "Winning Streak" effect',}}, -- 50% Job ability Bonus
@@ -408,7 +408,7 @@ function get_sets()
 		neck="Regal Necklace", -- 20 sec Duration
 		left_ring="Barataria Ring", -- +5 Effect
 		right_ring="Luzaf's Ring", -- 16 yalm range
-		back={ name="Camulus's Mantle", augments={'HP+60','HP+20','"Snapshot"+10',}}, -- 30 sec Duration
+		back={ name="Camulus's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dual Wield"+10','Damage taken-5%',}}, -- 30 sec Duration
 	}
 
 	sets.PhantomRoll["Fighter's Roll"] = sets.PhantomRoll
@@ -506,7 +506,7 @@ function get_sets()
 
 	sets.WS.MAB = set_combine(sets.WS, {
 		ammo=Ammo.Bullet.MAB,
-		feet={ name="Lanun Bottes +3", augments={'Enhances "Wild Card" effect',}},
+		feet="Lanun Bottes +4",
 		waist="Eschan Stone",
 		left_ear="Friomisi Earring",
 		right_ear="Crematio Earring",
@@ -534,7 +534,18 @@ function get_sets()
 	sets.WS.AM3.RA['Armageddon'] = {}
 
 	sets.WS['Aeolian Edge'] = set_combine(sets.WS.MAB, {
-		right_ear={ name="Moonshade Earring", augments={'"Mag.Atk.Bns."+4','TP Bonus +250',}},
+		head="Nyame Helm",
+		body="Lanun Frac +4",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Lanun Bottes +4",
+		neck={ name="Comm. Charm +2", augments={'Path: A',}},
+		waist="Eschan Stone",
+		left_ear="Moonshade Earring",
+		right_ear="Friomisi Earring",
+		left_ring="Archon Ring",
+		right_ring="Dingir Ring",
+		back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	})
 
 	sets.WS["Savage Blade"] = set_combine(sets.WS, {
@@ -563,22 +574,33 @@ function get_sets()
 	})
 
 	sets.WS["Wildfire"] = set_combine(sets.WS.MAB, {
-
+		head="Nyame Helm",
+		body="Lanun Frac +4",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Lanun Bottes +4",
+		neck={ name="Comm. Charm +2", augments={'Path: A',}},
+		waist="Eschan Stone",
+		left_ear="Moonshade Earring",
+		right_ear="Friomisi Earring",
+		left_ring="Archon Ring",
+		right_ring="Dingir Ring",
+		back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	})
 
 	sets.WS["Leaden Salute"] = set_combine(sets.WS.MAB, {
-    head="Nyame Helm",
-    body="Nyame Mail",
-    hands="Nyame Gauntlets",
-    legs="Nyame Flanchard",
-    feet="Nyame Sollerets",
-    neck="Sibyl Scarf",
-    waist="Null Belt",
-    left_ear="Moonshade Earring",
-    right_ear="Friomisi Earring",
-    left_ring="Archon Ring",
-    right_ring="Dingir Ring",
-    back={ name="Camulus's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+		head="Nyame Helm",
+		body="Lanun Frac +4",
+		hands="Nyame Gauntlets",
+		legs="Nyame Flanchard",
+		feet="Lanun Bottes +4",
+		neck={ name="Comm. Charm +2", augments={'Path: A',}},
+		waist="Eschan Stone",
+		left_ear="Moonshade Earring",
+		right_ear="Friomisi Earring",
+		left_ring="Archon Ring",
+		right_ring="Dingir Ring",
+		back={ name="Camulus's Mantle", augments={'AGI+20','Mag. Acc+20 /Mag. Dmg.+20','AGI+10','Weapon skill damage +10%',}},
 	})
 
 	sets.TreasureHunter = {
