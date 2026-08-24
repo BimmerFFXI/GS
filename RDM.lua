@@ -256,7 +256,7 @@ function get_sets()
 		waist="Witful Belt", -- 3 Quick Magic
 		left_ear={ name="Etiolation Earring", priority=1}, -- Used to Keep HP/MP pool
 		right_ear={ name="Leth. Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+13','Mag. Acc.+13','"Dbl.Atk."+4',}}, -- 8
-		-- left_ring="Lebeche Ring", -- 2 Quick Magic
+		left_ring="Lebeche Ring", -- 2 Quick Magic
 		-- right_ring={ name="Etana Ring", priority=2,},
 		-- back="Perimede Cape", -- 4 Quick Magic
 	} -- 44% total Fast Cast and 11% Quick Magic
@@ -439,7 +439,7 @@ function get_sets()
 
 	sets.Midcast["Aquaveil"] = set_combine(sets.Midcast.Enhancing, {
 		hands="Regal Cuffs",
-		-- head="Amalric Coif +1"
+		head="Amalric Coif +1"
 	})
 
 	-- Spells that require SKILL - RDM only needs +500 skill except Temper II
@@ -459,7 +459,7 @@ function get_sets()
 	sets.Midcast["Dispelga"] = set_combine (sets.Midcast.Enfeebling, sets.TreasureHunter)
 
 	sets.Midcast.Refresh = set_combine(sets.Midcast.Enhancing, {
-		-- head="Amalric Coif +1",
+		head="Amalric Coif +1",
 		body="Atrophy Tabard +4",
 		legs="Leth. Fuseau +3",
 	})
