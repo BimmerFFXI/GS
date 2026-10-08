@@ -105,15 +105,15 @@ function get_sets()
 	sets.Idle = {
 		range=Instrument.Idle,  -- 4/0
 		head="Null Masque", -- 10/10
-		body="Fili Hongreline +3",
-		hands="Bunzi's Gloves", -- 8/8 
-		legs="Fili Rhingrave +3", -- 13/13
-		feet="Fili Cothurnes +3", -- 18% Movement
+		body="Revelation Plate.",
+		hands="Bunzi's Gloves",
+		legs="Revelation Brais",
+		feet="Revelation Sab.",
 		neck={ name="Bard's Charm +2", augments={'Path: A',}},
 		waist="Null Belt",
-		left_ear={ name="Odnowa Earring +1", augments={'Path: A',}}, -- 3/3
-		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}}, -- 5
-		left_ring="Murky Ring", -- 10
+		left_ear="Alabaster Earring", -- 5/5
+		right_ear={ name="Fili Earring +1", augments={'System: 1 ID: 1676 Val: 0','Accuracy+15','Mag. Acc.+15','Damage taken-5%',}}, -- 5/5
+		left_ring={ name="Chirich Ring +1", bag="wardrobe1", priority=2},
 		right_ring={ name="Chirich Ring +1", bag="wardrobe2", priority=1},
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10','Phys. dmg. taken-10%',}}, -- 10
 	}
@@ -152,14 +152,14 @@ function get_sets()
 	--Base TP set to build off
 	sets.OffenseMode.TP = {
 		range=Instrument.TP,
-		head="Aya. Zucchetto +2", -- 3
-		body="Ayanmo Corazza +2", -- 6
-		hands="Bunzi's Gloves", -- 8
-		legs="Fili Rhingrave +3", -- 13
-		feet="Nyame Sollerets", -- 7
+		head="Null Masque", -- 10/10
+		body="Revelation Plate.",
+		hands="Bunzi's Gloves", -- 8/8
+		legs="Revelation Brais", -- 7/7
+		feet="Revelation Sab.", -- 5
 		neck={ name="Bard's Charm +2", augments={'Path: A',}},
 		waist="Reiki Yotai",
-		left_ear="Telos Earring",
+		left_ear="Alabaster Earring", -- 5/5
 		right_ear="Dedition Earring",
 		left_ring="Murky Ring", -- 10
 		right_ring={ name="Chirich Ring +1", bag="wardrobe2", priority=1},
